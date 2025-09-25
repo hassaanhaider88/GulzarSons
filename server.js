@@ -5,6 +5,7 @@ import PRouter from "./Products/Product.Router.js";
 import ImgUploaderRouter from "./ImageUploader.Router.js";
 import SaveUserRouter from "./User/User.Router.js";
 import offersRoutes from "./Offers/Offers.Router.js";
+import OrderRoutes from "./Orders/Order.Router.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 donenv.config();
@@ -35,5 +36,6 @@ app.use("/api/products", PRouter);
 app.use("/api/upload-img", ImgUploaderRouter);
 app.use("/api/users", SaveUserRouter);
 app.use("/api/offers", offersRoutes);
+app.use('/api/orders',OrderRoutes)
 
 app.listen(PORT, () => console.log(`API is running on port ${PORT}`));
