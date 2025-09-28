@@ -10,7 +10,6 @@ router.get("/", async (req, res) => {
     success: true,
     data: offers,
   });
-  res.json(offers);
 });
 
 // Add new offer
