@@ -5,10 +5,10 @@ export const getAllProducts = async (req, res) => {
     var AllProducts = await ProductsModal.aggregate([
       {
         $addFields: {
-          isPriceNull: { $cond: [{ $ifNull: ["$ProductPrice", false] }, 0, 1] },
+          isPriceNull: { $cond: [{ $ifNull: ["$ProductOriginalPrice", false] }, 0, 1] },
         },
       },
-      { $sort: { isPriceNull: 1, ProductPrice: 1 } },
+      { $sort: { isPriceNull: 1, ProductOriginalPrice: 1 } },
     ]);
 
     res.send({
@@ -33,7 +33,8 @@ export const createProduct = async (req, res) => {
       ProductImgUrl,
       ProductDescript,
       Cetagroy,
-      ProductPrice,
+      ProductOriginalPrice,
+      ProductOfferPrice,
       IsProductAvailable,
     } = req.body;
     // console.log(ProductImgUrl)
@@ -44,7 +45,8 @@ export const createProduct = async (req, res) => {
       ProductImgUrl,
       ProductDescript,
       Cetagroy,
-      ProductPrice,
+      ProductOriginalPrice,
+      ProductOfferPrice,
       IsProductAvailable,
     });
     //   ProductsModal.save();
@@ -86,7 +88,8 @@ export const updateProduct = async (req, res) => {
       ProductImgUrl,
       ProductDescript,
       Cetagroy,
-      ProductPrice,
+      ProductOriginalPrice,
+      ProductOfferPrice,
       IsProductAvailable,
     } = req.body;
 
@@ -97,7 +100,8 @@ export const updateProduct = async (req, res) => {
         ProductImgUrl,
         ProductDescript,
         Cetagroy,
-        ProductPrice,
+        ProductOriginalPrice,
+        ProductOfferPrice,
         IsProductAvailable,
       },
       {
