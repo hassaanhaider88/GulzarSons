@@ -16,7 +16,7 @@ export const createOrder = async (req, res) => {
 
 
     const newOrder = new OrderModal({
-      ProductId: Products,
+      Products,
       BuyerName,
       BuyerPhone,
       BuyerEmail,
@@ -39,13 +39,12 @@ export const createOrder = async (req, res) => {
 };
 
 // GET all orders
-export const getAllOrders =   async (req, res) => {
+export const getAllOrders = async (req, res) => {
   try {
     const orders = await OrderModal.find()
-      .populate("ProductId", "ProductCode ProductImgUrl ProductPrice") // populate only needed fields
+      .populate("Products.ProductId", "ProductCode ProductImgUrl ProductPrice") // populate only needed fields
       .sort({ createdAt: -1 });
-
-    res.json({ success: true, orders });
+      res.json({ success: true, orders });
   } catch (err) {
     res.status(500).json({ success: false, message: "Error fetching orders" });
   }
@@ -54,8 +53,9 @@ export const getAllOrders =   async (req, res) => {
 
 // Get single order by ID
 export const getOrderById = async (req, res) => {
+
   try {
-    const order = await OrderModal.findById(req.params.id).populate("ProductId");
+    const order = await OrderModal.findById(req.params.id).populate("Products.ProductId", "ProductCode ProductImgUrl ProductPrice");
     if (!order) return res.status(404).json({ success: false, message: "Order not found" });
 
     res.json({ success: true, order });

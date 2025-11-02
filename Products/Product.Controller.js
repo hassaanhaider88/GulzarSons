@@ -1,4 +1,5 @@
 import ProductsModal from "./Product.Modal.js";
+import getYTCode from "../Services/getYTCode.js";
 
 export const getAllProducts = async (req, res) => {
   try {
@@ -32,18 +33,21 @@ export const createProduct = async (req, res) => {
       ProductName,
       ProductImgUrl,
       ProductDescript,
+      ProductYTVideoUrl,
       Cetagroy,
       ProductOriginalPrice,
       ProductOfferPrice,
       IsProductAvailable,
     } = req.body;
-    // console.log(ProductImgUrl)
+
+   var YTCode = getYTCode(ProductYTVideoUrl);
 
     var product = await ProductsModal.create({
       ProductCode,
       ProductName,
       ProductImgUrl,
       ProductDescript,
+      ProductYTVideoCode : YTCode,
       Cetagroy,
       ProductOriginalPrice,
       ProductOfferPrice,
@@ -87,18 +91,21 @@ export const updateProduct = async (req, res) => {
       ProductName,
       ProductImgUrl,
       ProductDescript,
+      ProductYTVideoUrl,
       Cetagroy,
       ProductOriginalPrice,
       ProductOfferPrice,
       IsProductAvailable,
     } = req.body;
 
+    var YTCode = getYTCode(ProductYTVideoUrl);
     const updatedProduct = await ProductsModal.findOneAndUpdate(
       { ProductCode: ProductCode }, // filter
       {
         ProductName,
         ProductImgUrl,
         ProductDescript,
+        ProductYTVideoCode : YTCode,
         Cetagroy,
         ProductOriginalPrice,
         ProductOfferPrice,

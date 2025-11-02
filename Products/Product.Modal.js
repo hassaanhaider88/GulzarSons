@@ -6,6 +6,7 @@ var ProuductSchema = mongoose.Schema({
   ProductImgUrl: Array,
   ProductDescript: String,
   Cetagroy: String,
+  ProductYTVideoCode: String,
   ProductOriginalPrice: Number,
   ProductOfferPrice: Number,
   IsProductAvailable: Boolean,
