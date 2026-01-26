@@ -12,6 +12,6 @@ var ProuductSchema = mongoose.Schema({
   IsProductAvailable: Boolean,
 });
 
-var ProductsModal = mongoose.model('product',ProuductSchema)
+var ProductsModal = mongoose.model('product', ProuductSchema)
 
 export default ProductsModal;

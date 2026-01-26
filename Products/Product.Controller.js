@@ -40,14 +40,14 @@ export const createProduct = async (req, res) => {
       IsProductAvailable,
     } = req.body;
 
-   var YTCode = getYTCode(ProductYTVideoUrl);
+    var YTCode = getYTCode(ProductYTVideoUrl);
 
     var product = await ProductsModal.create({
       ProductCode,
       ProductName,
       ProductImgUrl,
       ProductDescript,
-      ProductYTVideoCode : YTCode,
+      ProductYTVideoCode: YTCode,
       Cetagroy,
       ProductOriginalPrice,
       ProductOfferPrice,
@@ -105,7 +105,7 @@ export const updateProduct = async (req, res) => {
         ProductName,
         ProductImgUrl,
         ProductDescript,
-        ProductYTVideoCode : YTCode,
+        ProductYTVideoCode: YTCode,
         Cetagroy,
         ProductOriginalPrice,
         ProductOfferPrice,
@@ -146,3 +146,44 @@ export const deleteProduct = async (req, res) => {
     });
   }
 };
+
+
+export const rssRoutes = async (req, res) => {
+  try {
+    const products = await ProductsModal.find({
+      IsProductAvailable: true,
+      ProductImgUrl: { $exists: true, $ne: [] }
+    }).lean();
+
+    let itemsXml = "";
+
+    products.forEach(product => {
+      itemsXml += `
+      <item>
+        <title><![CDATA[${product.ProductName}]]></title>
+        <link>https://gulzarsonsfurniture.com/SinleProductView.html?PCode=${product.ProductCode}</link>
+        <description><![CDATA[${product.ProductDescript || ""}]]></description>
+        <media:content
+          url="${product.ProductImgUrl[0]}"
+          medium="image"
+        />
+      </item>`;
+    });
+
+    const rss = `<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+      <channel>
+        <title>Gulzar Sons Furniture</title>
+        <link>https://gulzarsonsfurniture.com</link>
+        <description>Luxury Furniture Designs</description>
+        ${itemsXml}
+      </channel>
+    </rss>`;
+
+    res.set("Content-Type", "application/xml");
+    res.send(rss);
+
+  } catch (error) {
+    res.status(500).send("Failed to generate RSS feed");
+  }
+}
