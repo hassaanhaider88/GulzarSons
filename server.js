@@ -7,6 +7,7 @@ import SaveUserRouter from "./User/User.Router.js";
 import offersRoutes from "./Offers/Offers.Router.js";
 import OrderRoutes from "./Orders/Order.Router.js";
 import bodyParser from "body-parser";
+import sendGoogleReviews from './Services/SendGoogleReviews.js'
 import cors from "cors";
 donenv.config();
 const app = express();
@@ -26,9 +27,9 @@ app.post("/api/admin-login", (req, res) => {
     emailInput == process.env.ADMIN_EMAIL &&
     passwordInput == process.env.ADMIN_PASSWORD
   ) {
-    res.json({ message : "Login Successfull",success: true });
+    res.json({ message: "Login Successfull", success: true });
   } else {
-    res.json({ message : "Login Failed",success: false });
+    res.json({ message: "Login Failed", success: false });
   }
 });
 
@@ -36,6 +37,7 @@ app.use("/api/products", PRouter);
 app.use("/api/upload-img", ImgUploaderRouter);
 app.use("/api/users", SaveUserRouter);
 app.use("/api/offers", offersRoutes);
-app.use('/api/orders',OrderRoutes)
+app.use('/api/orders', OrderRoutes);
+app.use('/api/send-google-reviews', sendGoogleReviews)
 
 app.listen(PORT, () => console.log(`API is running on port ${PORT}`));
