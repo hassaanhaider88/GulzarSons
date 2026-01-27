@@ -9,6 +9,7 @@ import OrderRoutes from "./Orders/Order.Router.js";
 import bodyParser from "body-parser";
 import sendGoogleReviews from './Services/SendGoogleReviews.js'
 import cors from "cors";
+import requestLogger from "./Services/RequestLogger.js";
 donenv.config();
 const app = express();
 app.use(cors());
@@ -18,8 +19,11 @@ app.use(express.urlencoded({ extended: true }));
 
 var PORT = process.env.PORT || 8800;
 ConnectDB();
+
+app.use(requestLogger)
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Gulzar And Sons APIs Working Well and Good");
 });
 app.post("/api/admin-login", (req, res) => {
   var { emailInput, passwordInput } = req.body;

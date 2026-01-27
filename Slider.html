@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+
+    <style>
+      body {
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #F5AC3A;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #f97416a1;
+        }
+      }
+
+      .MainReviewsContainer {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        margin: 0;
+      }
+
+      .review-marquee-row {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .review-gradient-left,
+      .review-gradient-right {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 80px;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      .review-gradient-left {
+        left: 0;
+        background: linear-gradient(to right, white, transparent);
+      }
+
+      .review-gradient-right {
+        right: 0;
+        background: linear-gradient(to left, white, transparent);
+      }
+
+      .review-marquee-inner {
+        display: flex;
+        min-width: 200%;
+        padding: 40px 0;
+        animation: reviewMarqueeScroll 25s linear infinite;
+        cursor: pointer;
+      }
+
+      .review-marquee-inner:hover {
+        animation-play-state: paused;
+      }
+
+      .review-marquee-reverse {
+        animation-direction: reverse;
+      }
+
+      @keyframes reviewMarqueeScroll {
+        0% {
+          transform: translateX(0%);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .review-card {
+        width: 288px;
+        margin: 0 16px;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        transition: box-shadow 0.2s ease;
+        flex-shrink: 0;
+        background: #fff;
+        height: 380px;
+        overflow-y: scroll;
+      }
+
+      .review-card:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .review-card-header {
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
+      }
+
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+      }
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .user-top {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: -8px;
+      }
+
+      .handle {
+        font-size: 12px;
+        color: #64748b;
+        margin-top: -2px;
+      }
+
+      .review-text {
+        font-size: 14px;
+        padding: 16px 0;
+        color: #1f2937;
+      }
+
+      .review-card-footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #64748b;
+      }
+
+      .footer-left {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+      }
+
+      .footer-left a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .footer-left a:hover {
+        color: #0ea5e9;
+      }
+
+      .small-icon {
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="MainReviewsContainer">
+      <div class="review-marquee-row">
+        <div class="review-gradient-left"></div>
+        <div class="review-marquee-inner" id="row1"></div>
+        <div class="review-gradient-right"></div>
+      </div>
+    </section>
+
+    <script>
+      let CardData = [];
+
+      const getDataFromDB = async () => {
+        try {
+          const res = await fetch(
+            "http://localhost:3000/api/send-google-reviews",
+          );
+          const data = await res.json();
+
+          if (data.success && Array.isArray(data.data)) {
+            CardData = data.data;
+          } else {
+            CardData = getFallbackData();
+          }
+        } catch (error) {
+          console.log(error.message);
+          CardData = getFallbackData();
+        }
+
+        initSlider();
+      };
+
+      function getFallbackData() {
+        return [
+          {
+            review_id:
+              "Ci9DQUlRQUNvZENodHljRjlvT2pndFlsaE9Ua2RmUnpoTGJVMXZWVlZxYTNWblIyYxAB",
+            time: {
+              published: 1754215266458655,
+              last_edited: 1768730050894784,
+            },
+            author: {
+              name: "Abdul Aziz",
+              profile_url:
+                "https://lh3.googleusercontent.com/a/ACg8ocL67vsvCQzF6KYLOzjLGKGsDjBOXNW6QVVxjAaqjC5XAubQhQ=s120-c-rp-mo-br100",
+              url: "https://www.google.com/maps/contrib/105400033802070042868?hl=en",
+              id: "105400033802070042868",
+            },
+            review: {
+              rating: 5,
+              text: "I recently visited Gulzar Sons and I can honestly say they provide the best quality furniture in Chiniot. The attention to detail in their hand-carved pieces is unmatched. If you are looking for top quality furniture that lasts a lifetime, this is the place to go!",
+              language: "en",
+            },
+            images: [
+              {
+                id: "CIABIhCogXraCracgIyZXx0gmuxZ",
+                url: "https://lh3.googleusercontent.com/geougc-cs/ABOP9ptTymYcs-lCRwvNAzcrNKQbD1r8kt4TU4Zhm7NEtff0kwU1Dyl33Sjxixz8UyMsYN4kMFqRPzoHMipFsn0P5ZDqWNLCeab94sK-PyUbyNo4oy1uvfwI_yFCmjbDv9h-ghoBf0UVdPjRhR4m",
+                size: {
+                  width: 3024,
+                  height: 4032,
+                },
+                location: {
+                  friendly: "Gulzar Sons Furniture",
+                  lat: 31.719396902839,
+                  long: 72.9849134156374,
+                },
+                caption: null,
+              },
+            ],
+            source: "Google",
+            response: {
+              text: '"We are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!"',
+              time: {
+                published: 1767694417000000,
+                last_edited: 1768126246000000,
+              },
+            },
+          },
+          {
+            review_id:
+              "Ci9DQUlRQUNvZENodHljRjlvT21sSlZqSkZUM0I0WDJKVWQwRk1hakJFWVRKVVVtYxAB",
+            time: {
+              published: 1768309685147216,
+              last_edited: 1768309685147216,
+            },
+            author: {
+              name: "Tabubakar7606",
+              profile_url:
+                "https://lh3.googleusercontent.com/a/ACg8ocLzu0_WBmR03DCfeARmHc4HlaeJBcl7Yst_-Aib8Pq7ONCcPQ=s120-c-rp-mo-br100",
+              url: "https://www.google.com/maps/contrib/110487785869482975501?hl=en",
+              id: "110487785869482975501",
+            },
+            review: {
+              rating: 5,
+              text: "I was looking for the best quality furniture in Chiniot and Gulzar Sons did not disappoint. The craftsmanship on their showcase is incredible. I bought this one so good, If you want authentic Chinioti wood carving and premium finishes, this is the top shop to visit. Highly recommended for anyone wanting luxury furniture.",
+              language: "en",
+            },
+            images: null,
+            source: "Google",
+            response: {
+              text: "Tabubakar Sir Thank you so much for the 5-star rating! We strive to provide the best quality furniture in Chiniot, and we are glad you had a great experience with Gulzar Sons. We look forward to serving you again!",
+              time: {
+                published: 1768309766000000,
+                last_edited: 1768309766000000,
+              },
+            },
+          },
+          {
+            review_id:
+              "Ci9DQUlRQUNvZENodHljRjlvT2pOVGEwSXlSbk5TV2xoTmNuaGhTMnhpT0RaemNYYxAB",
+            time: {
+              published: 1768482792504867,
+              last_edited: 1768482792504867,
+            },
+            author: {
+              name: "Sh Sufyan",
+              profile_url:
+                "https://lh3.googleusercontent.com/a/ACg8ocINaQWJonPSXKLbmVDsPGE8om_AMOA2FrInD_rbCFN1-GAlXg=s120-c-rp-mo-br100",
+              url: "https://www.google.com/maps/contrib/109794753843094489886?hl=en",
+              id: "109794753843094489886",
+            },
+            review: {
+              rating: 5,
+              text: "I have been buying from Gulzar Sons for years because they consistently provide the best quality furniture in Chiniot. Their designs are timeless and the polish stays shiny for a long time. Great service and even better furniture!",
+              language: "en",
+            },
+            images: null,
+            source: "Google",
+            response: {
+              text: "Sh Sufyan\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best and Premium quality furniture in Chiniot. Thank you for choosing us!",
+              time: {
+                published: 1768483992000000,
+                last_edited: 1768483992000000,
+              },
+            },
+          },
+        ];
+      }
+
+      const row1 = document.getElementById("row1");
+
+      function formatDate(micro) {
+        const date = new Date(micro / 1000);
+        return date.toUTCString();
+      }
+
+      const createCard = (card) => {
+        const businessReply = card.response?.text
+          ? `<div style="background:#f1f5f9;padding:8px;border-radius:6px;margin-top:8px;font-size:12px;">
+         <strong>Business Reply:</strong><br>${card.response.text}
+       </div>`
+          : "";
+        const reviewImage = card.images?.[0]?.url
+          ? `<img src="${card.images[0].url}" style="width:100%; border-radius:8px; margin-top:8px;" />`
+          : "";
+        const handlerName = card.author.name.split(" ").join("").toLowerCase();
+
+        return `
+  <div class="review-card">
+    <div class="review-card-header">
+      <img class="avatar" src="${card.author.profile_url}" />
+      <div class="user-info">
+        <div class="user-top">
+          <p>${card.author.name}</p>
+            <svg class="mt-0.5" width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3" />
+                        </svg>
+        </div>
+        <span class="handle">@${handlerName}</span>
+      </div>
+    </div>
+
+    <p class="review-text">${card.review.text}</p>
+
+    ${businessReply}
+ ${reviewImage}
+    <div class="review-card-footer">
+      <div class="footer-left">Posted To <a style="margin-top:3px" href="${card.author.url}" target="_blank" ><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" height="17px" width="17px" xmlns="http://www.w3.org/2000/svg" class="copy-svg-injected"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+	c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+	c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+	C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg></a></div>
+      <p>${formatDate(card.time.published)}</p>
+    </div>
+  </div>
+`;
+      };
+
+      function renderCards(target) {
+        target.innerHTML = "";
+        const doubled = [...CardData, ...CardData];
+        doubled.forEach((card) => {
+          target.insertAdjacentHTML("beforeend", createCard(card));
+        });
+      }
+
+      function initSlider() {
+        renderCards(row1);
+      }
+
+      getDataFromDB();
+    </script>
+  </body>
+</html>
