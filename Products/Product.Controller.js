@@ -158,17 +158,23 @@ export const rssRoutes = async (req, res) => {
     let itemsXml = "";
 
     products.forEach(product => {
+      const mediaXml = (product.ProductImgUrl || [])
+        .map(url => `
+      <media:content
+        url="${url}"
+        medium="image"
+      />`)
+        .join("");
+
       itemsXml += `
-      <item>
-        <title><![CDATA[${product.ProductName}]]></title>
-        <link>https://gulzarsonsfurniture.com/SinleProductView.html?PCode=${product.ProductCode}</link>
-        <description><![CDATA[${product.ProductDescript || ""}]]></description>
-        <media:content
-          url="${product.ProductImgUrl[0]}"
-          medium="image"
-        />
-      </item>`;
+    <item>
+      <title><![CDATA[${product.ProductName}]]></title>
+      <link>https://gulzarsonsfurniture.com/SinleProductView.html?PCode=${product.ProductCode}</link>
+      <description><![CDATA[${product.ProductDescript || ""}]]></description>
+      ${mediaXml}
+    </item>`;
     });
+
 
     const rss = `<?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
