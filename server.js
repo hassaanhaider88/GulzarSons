@@ -6,8 +6,8 @@ import ImgUploaderRouter from "./ImageUploader.Router.js";
 import SaveUserRouter from "./User/User.Router.js";
 import offersRoutes from "./Offers/Offers.Router.js";
 import OrderRoutes from "./Orders/Order.Router.js";
-import bodyParser from "body-parser";
 import sendGoogleReviews from './Services/SendGoogleReviews.js'
+import BlogRoutes from './Blogs/Blogs.Router.js'
 import cors from "cors";
 import requestLogger from "./Services/RequestLogger.js";
 donenv.config();
@@ -25,6 +25,7 @@ app.use(requestLogger)
 app.get("/", (req, res) => {
   res.send("Gulzar And Sons APIs Working Well and Good");
 });
+
 app.post("/api/admin-login", (req, res) => {
   var { emailInput, passwordInput } = req.body;
   if (
@@ -43,5 +44,7 @@ app.use("/api/users", SaveUserRouter);
 app.use("/api/offers", offersRoutes);
 app.use('/api/orders', OrderRoutes);
 app.use('/api/send-google-reviews', sendGoogleReviews)
+
+app.use("/api/blogs",BlogRoutes)
 
 app.listen(PORT, () => console.log(`API is running on port ${PORT}`));

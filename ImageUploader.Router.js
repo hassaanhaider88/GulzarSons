@@ -18,9 +18,11 @@ const upload = multer({ storage });
 
 // Upload endpoint
 router.post("/", upload.single("image"), (req, res) => {
+
   res.json({
-    url: req.file.path, // Cloudinary URL
+    url: req.file.path,
     public_id: req.file.filename,
+    success: true
   });
 });
 
