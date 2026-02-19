@@ -1,5 +1,5 @@
 import express from 'express';
-import { SendAllBlogs, AddNewBlogs, UpdateBlog, DeleteBlog, SendSingBlog } from './Blogs.Controller.js';
+import { SendAllBlogs, AddNewBlogs, UpdateBlog, DeleteBlog, SendSendBlogJson } from './Blogs.Controller.js';
 
 const router = express.Router();
 
@@ -11,6 +11,8 @@ router.post("/update", UpdateBlog)
 
 router.post("/delete",DeleteBlog)
 
-router.get("/:id",SendSingBlog)
+
+router.get("/single/:id",SendSendBlogJson)
+
 
 export default router;

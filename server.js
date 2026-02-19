@@ -10,6 +10,7 @@ import sendGoogleReviews from './Services/SendGoogleReviews.js'
 import BlogRoutes from './Blogs/Blogs.Router.js'
 import cors from "cors";
 import requestLogger from "./Services/RequestLogger.js";
+import { SendSingBlog } from "./Blogs/Blogs.Controller.js";
 donenv.config();
 const app = express();
 app.use(cors());
@@ -38,6 +39,12 @@ app.post("/api/admin-login", (req, res) => {
     res.json({ message: "Login Failed", success: false });
   }
 });
+
+
+// single blog send SSR
+app.get("/blogs/:id",SendSingBlog)
+
+
 
 app.use("/api/products", PRouter);
 app.use("/api/upload-img", ImgUploaderRouter);

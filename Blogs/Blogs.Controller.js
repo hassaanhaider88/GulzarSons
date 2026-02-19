@@ -272,3 +272,34 @@ export async function SendSingBlog(req, res) {
     res.status(500).send(error.message);
   }
 }
+
+export async function SendSendBlogJson(req, res) {
+  try {
+    const { id } = req.params;
+    if (!id) {
+      return res.json({
+        success: false,
+        message: "Please Give Id"
+      })
+    }
+    const getBlog = await BlogModal.findById(id);
+    if (!getBlog) {
+      return res.json({
+        success: false,
+        message: "Blog is not found"
+      })
+    }
+
+    return res.json({
+      success: true,
+      message: "Blog found",
+      data: getBlog
+    })
+
+  } catch (error) {
+    return res.json({
+      success: false,
+      message: error.message
+    })
+  }
+}
