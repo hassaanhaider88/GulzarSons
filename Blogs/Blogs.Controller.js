@@ -133,64 +133,7 @@ export async function DeleteBlog(req, res) {
   }
 }
 
-// export async function SendSingBlog(req, res) {
-//     try {
-//         const { id } = req.params;
 
-//         const blog = await BlogModal.findById(id);
-
-//         if (!blog) {
-//             return res.status(404).send("Blog not found");
-//         }
-
-//         let cleanedBody = blog.MainBody
-//             .replace(/\* /g, "\n- ")
-//             .replace(/MainHeading:/g, "\n# ")
-//             .replace(/MainBody:/g, "\n")
-//             .replace(/\*\*/g, "\n**");
-
-//         const htmlContent = marked(cleanedBody);
-
-//         res.send(`
-//       <!DOCTYPE html>
-//       <html>
-//       <head>
-//         <title>${blog.MainHeading}</title>
-//         <meta name="description" content="${blog.MainHeading}" />
-//         <script src="https://cdn.tailwindcss.com"></script>
-//       </head>
-
-//       <body class="bg-gray-100">
-//         <div class="max-w-4xl mx-auto bg-white shadow-md rounded-xl mt-10 p-8">
-
-//           <!-- Blog Image -->
-//           <img
-//             src="${blog.ImageUrl}"
-//             alt="${blog.MainHeading}"
-//             class="w-full h-96 object-cover rounded-lg mb-8"
-//           />
-
-//           <!-- Blog Heading -->
-//           <h1 class="text-4xl font-bold mb-6 text-gray-900">
-//             ${blog.MainHeading}
-//           </h1>
-
-//           <!-- Blog Body -->
-//           <div class="prose prose-lg max-w-none text-gray-700">
-//             ${htmlContent}
-//           </div>
-
-//         </div>
-//       </body>
-//       </html>
-//     `);
-//     } catch (error) {
-//         return res.json({
-//             success: false,
-//             message: error.message,
-//         });
-//     }
-// }
 
 export async function SendSingBlog(req, res) {
   try {
@@ -211,6 +154,7 @@ export async function SendSingBlog(req, res) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>${blog.MainHeading}</title>
+       <link rel="icon" type="image/x-icon" href="https://gulzarsonsfurniture.com/assets/final.png" />
         <meta name="description" content="${blog.MainHeading}" />
 
         <style>
