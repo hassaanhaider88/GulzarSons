@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 
 app.post("/api/admin-login", (req, res) => {
   var { emailInput, passwordInput } = req.body;
-  
+
   if (
     emailInput == process.env.ADMIN_EMAIL &&
     passwordInput == process.env.ADMIN_PASSWORD
@@ -42,7 +42,7 @@ app.post("/api/admin-login", (req, res) => {
 
 
 // single blog send SSR
-app.get("/blogs/:id",SendSingBlog)
+app.get("/blogs/:id", SendSingBlog)
 
 
 
@@ -53,6 +53,6 @@ app.use("/api/offers", offersRoutes);
 app.use('/api/orders', OrderRoutes);
 app.use('/api/send-google-reviews', sendGoogleReviews)
 
-app.use("/api/blogs",BlogRoutes)
+app.use("/api/blogs", BlogRoutes)
 
 app.listen(PORT, () => console.log(`API is running on port ${PORT}`));

@@ -1,302 +1,1076 @@
 [
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pndFlsaE9Ua2RmUnpoTGJVMXZWVlZxYTNWblIyYxAB",
-      "time": {
-        "published": 1754215266458655,
-        "last_edited": 1768730050894784
-      },
-      "author": {
-        "name": "Abdul Aziz",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocL67vsvCQzF6KYLOzjLGKGsDjBOXNW6QVVxjAaqjC5XAubQhQ=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/105400033802070042868?hl=en",
-        "id": "105400033802070042868"
-      },
-      "review": {
-        "rating": 5,
-        "text": "I recently visited Gulzar Sons and I can honestly say they provide the best quality furniture in Chiniot. The attention to detail in their hand-carved pieces is unmatched. If you are looking for top quality furniture that lasts a lifetime, this is the place to go!",
-        "language": "en"
-      },
-      "images": [
-        {
-          "id": "CIABIhCogXraCracgIyZXx0gmuxZ",
-          "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9ptTymYcs-lCRwvNAzcrNKQbD1r8kt4TU4Zhm7NEtff0kwU1Dyl33Sjxixz8UyMsYN4kMFqRPzoHMipFsn0P5ZDqWNLCeab94sK-PyUbyNo4oy1uvfwI_yFCmjbDv9h-ghoBf0UVdPjRhR4m",
-          "size": {
-            "width": 3024,
-            "height": 4032
-          },
-          "location": {
-            "friendly": "Gulzar Sons Furniture",
-            "lat": 31.719396902839,
-            "long": 72.9849134156374
-          },
-          "caption": null
-        }
-      ],
-      "source": "Google",
-      "response": {
-        "text": "\"We are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!\"",
-        "time": {
-          "published": 1767694417000000,
-          "last_edited": 1768126246000000
-        }
-      }
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2taTFNqaGpXaTEwYlRkWk1rTkxlSGRIVG1sUmJHYxAB",
+    "time": {
+      "published": 1770621813669263,
+      "last_edited": 1770621868756691
     },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21sSlZqSkZUM0I0WDJKVWQwRk1hakJFWVRKVVVtYxAB",
-      "time": {
-        "published": 1768309685147216,
-        "last_edited": 1768309685147216
-      },
-      "author": {
-        "name": "Tabubakar7606",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocLzu0_WBmR03DCfeARmHc4HlaeJBcl7Yst_-Aib8Pq7ONCcPQ=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/110487785869482975501?hl=en",
-        "id": "110487785869482975501"
-      },
-      "review": {
-        "rating": 5,
-        "text": "I was looking for the best quality furniture in Chiniot and Gulzar Sons did not disappoint. The craftsmanship on their showcase is incredible. I bought this one so good, If you want authentic Chinioti wood carving and premium finishes, this is the top shop to visit. Highly recommended for anyone wanting luxury furniture.",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "Tabubakar Sir Thank you so much for the 5-star rating! We strive to provide the best quality furniture in Chiniot, and we are glad you had a great experience with Gulzar Sons. We look forward to serving you again!",
-        "time": {
-          "published": 1768309766000000,
-          "last_edited": 1768309766000000
-        }
-      }
+    "author": {
+      "name": "Abuzar Khan",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIYXXWNsOI1uxbU6FQnKos0poQVtM65sqt97KemOaOMt2Hxjg=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/110110350596906682162?hl=en",
+      "id": "110110350596906682162"
     },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pOVGEwSXlSbk5TV2xoTmNuaGhTMnhpT0RaemNYYxAB",
-      "time": {
-        "published": 1768482792504867,
-        "last_edited": 1768482792504867
-      },
-      "author": {
-        "name": "Sh Sufyan",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocINaQWJonPSXKLbmVDsPGE8om_AMOA2FrInD_rbCFN1-GAlXg=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/109794753843094489886?hl=en",
-        "id": "109794753843094489886"
-      },
-      "review": {
-        "rating": 5,
-        "text": "I have been buying from Gulzar Sons for years because they consistently provide the best quality furniture in Chiniot. Their designs are timeless and the polish stays shiny for a long time. Great service and even better furniture!",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "Sh Sufyan\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best and Premium quality furniture in Chiniot. Thank you for choosing us!",
-        "time": {
-          "published": 1768483992000000,
-          "last_edited": 1768483992000000
-        }
-      }
+    "review": {
+      "rating": 5,
+      "text": "We recently bought a bedroom set from Gulzar Sons and it’s easily the Best Quality furniture in chiniot 2026. The Bed carving is flawless, truly the Best Carving Furniture in Chiniot 2026 I have ever seen. We were looking for the Best Jahaiz Package Furniture in Chiniot 2026 and their deal was unbeatable. They are clearly a Top Quality Furniture brand in chiniot 2026 that uses Best Solid Shesham wood Furniture in chiniot 2026. Highly recommended for anyone looking for Bed wholesale in Chiniot!",
+      "language": "en"
     },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xCaFNIVnhkRXMwVkRGUmNXNUllbVZYVkVGb1RrRRAB",
-      "time": {
-        "published": 1768308725308791,
-        "last_edited": 1768308725308791
-      },
-      "author": {
-        "name": "Malik Abdullah",
-        "profile_url": "https://lh3.googleusercontent.com/a-/ALV-UjXX6awuzsS8k7aI2a8zIVQ3sL-_MC8lNhKp-hxgjptCGvq_t5Uh=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/101201095206446351876?hl=en",
-        "id": "101201095206446351876"
-      },
-      "review": {
-        "rating": 5,
-        "text": "Best quality furniture in chiniot\nALwaysTrusted bought this showcase pure finishing love this\nRecommended.",
-        "language": "en"
-      },
-      "images": [
-        {
-          "id": "CIABIhBUBC_WbTWQB1-bITnBjINW",
-          "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9pu7YWNyFND9LoKFb8aoaGz5-oRzvasjZ5IbriyPAbmtLYEeZVZYCbyBzWqSsNbkC3nzaAz7PTyFAZcCKUdiYyNN2nTNUUPOHoKHWZkCtm7k4tc3PTf21VYS0sQ82GdGWeA5ZaAJku-5J4zv",
-          "size": {
-            "width": 514,
-            "height": 662
-          },
-          "location": {
-            "friendly": "Gulzar Sons Furniture",
-            "lat": 31.719396902839,
-            "long": 72.9849134156374
-          },
-          "caption": null
-        }
-      ],
-      "source": "Google",
-      "response": {
-        "text": "Malik Abdullah !\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!",
-        "time": {
-          "published": 1768308795000000,
-          "last_edited": 1768308795000000
-        }
+    "images": [
+      {
+        "id": "CIABIhCz7fAbxbloWyWO_5hOop7k",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9ptCN0XSCMWvB-XGdoeVkGS3rzNxgu7Uld_cFzaaFA57-_jwgF7Shldr2GAMLBLIviriQ8FTrKnVWzZxWfft8sr64g8TdIx7t4TtESxeELBfyGZ6IdyZZ0eJ2AMkysUDIOEZx3soUKjt2dfH",
+        "size": {
+          "width": 864,
+          "height": 1080
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
       }
-    },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2s5MVVIVk5SemxSTVRWbFozaEdURk5xYnpWWFZGRRAB",
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Abuzar Khan\nThank you so much! We strive to maintain our reputation for the top quality chinioti Furniture.",
       "time": {
-        "published": 1767709741142174,
-        "last_edited": 1767709741142174
-      },
-      "author": {
-        "name": "M ahmad 786",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocI_-CK_pj093Uw5sZ4H10zpRWsQvgfWq000UEWzFsK6j6HRdQ=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/118297672555830495111?hl=en",
-        "id": "118297672555830495111"
-      },
-      "review": {
-        "rating": 5,
-        "text": "The collection here is stunning. I bought a bed frame recently, and was so impressed that the unique design was perfectly preserved from the showroom to my home.",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "\"We are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!\"",
-        "time": {
-          "published": 1768126147000000,
-          "last_edited": 1768126147000000
-        }
-      }
-    },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT20xcmJHWlRPVEJCZUdWcldsaGtUSEZTV1dNNFVsRRAB",
-      "time": {
-        "published": 1768816526634147,
-        "last_edited": 1768816526634147
-      },
-      "author": {
-        "name": "Ch Abu baker Wahla",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocKKECoZWH0YuEhjQ6HuprzjRw6gxMwqXUe1nzSEcCTuEc-W7Q=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/115432761853349031496?hl=en",
-        "id": "115432761853349031496"
-      },
-      "review": {
-        "rating": 5,
-        "text": "I have purchased the best quality furniture in chiniot. Highly recommended.",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "Ch Abu Bakar Wahla\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best and Premium quality furniture in Chiniot. Thank you for choosing us!",
-        "time": {
-          "published": 1768816644000000,
-          "last_edited": 1768816644000000
-        }
-      }
-    },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tKd1lscFJjVzl4TFZsMGJtSjJiMjAxVTFwVlVVRRAB",
-      "time": {
-        "published": 1768811566106417,
-        "last_edited": 1768811566106417
-      },
-      "author": {
-        "name": "Baba Jee",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocJL0oK5C0d3lIZKfkUkTon3nq0ri2mI8dsV1zh_Yk7tNFG4Fw=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/105608192836497403540?hl=en",
-        "id": "105608192836497403540"
-      },
-      "review": {
-        "rating": 5,
-        "text": "Amazing quality furniture in Chinot so proud to here very kind staff and good quality furniture",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "Baba Jee\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!",
-        "time": {
-          "published": 1768812207000000,
-          "last_edited": 1768812207000000
-        }
-      }
-    },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT201QldtTTVWVU5JWkZCYWRreGhjR0ZXWDA1WVFWRRAB",
-      "time": {
-        "published": 1768327641621851,
-        "last_edited": 1768327641621851
-      },
-      "author": {
-        "name": "Hassaan Sheikh",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocInCCH9hUIgrHDRgTHSlL-MWxJmDFY0AWTcDGsFziEifvVR7g=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/117683576478340661746?hl=en",
-        "id": "117683576478340661746"
-      },
-      "review": {
-        "rating": 5,
-        "text": "It was a fantastic experience...\nThe quality of all articles was awesome with Gulzar Sons Furniture",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "Hassaan \nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us",
-        "time": {
-          "published": 1768374888000000,
-          "last_edited": 1768374888000000
-        }
-      }
-    },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25ZeGRGOXRTVUpoWDBWWlMyRkZMVmhKVEdSWlYyYxAB",
-      "time": {
-        "published": 1755941309088813,
-        "last_edited": 1755941309088813
-      },
-      "author": {
-        "name": "Abdul Waheed",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocJoyEN9LxfTSo93nGp6KsArlkIQ8lwLWDITh67vV2qS8VhWqw=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/102578135880924074801?hl=en",
-        "id": "102578135880924074801"
-      },
-      "review": {
-        "rating": 5,
-        "text": "Amazing quality furniture! The designs are modern and durable. Highly recommended.",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "\"We are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!\"",
-        "time": {
-          "published": 1767694462000000,
-          "last_edited": 1768126126000000
-        }
-      }
-    },
-    {
-      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25kUVowTmtjelV4U21WUGFEZEtSamwzUkVaeWRVRRAB",
-      "time": {
-        "published": 1755941650598045,
-        "last_edited": 1755941650598045
-      },
-      "author": {
-        "name": "Muhammad Abdullah",
-        "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocLRLG4zb6-dKfEbCNXV_AXwaMEoREN_OkyqFYImYpXrB8Lqfw=s120-c-rp-mo-br100",
-        "url": "https://www.google.com/maps/contrib/103198430091590896818?hl=en",
-        "id": "103198430091590896818"
-      },
-      "review": {
-        "rating": 5,
-        "text": "Very professional staff, helpful and friendly. Furniture is stylish and comfortable",
-        "language": "en"
-      },
-      "images": null,
-      "source": "Google",
-      "response": {
-        "text": "\"Thank you so much for the 5-star rating! We strive to provide the best quality furniture in Chiniot, and we are glad you had a great experience with Gulzar Sons. We look forward to serving you again!\"",
-        "time": {
-          "published": 1767694451000000,
-          "last_edited": 1768126086000000
-        }
+        "published": 1770624329000000,
+        "last_edited": 1770624329000000
       }
     }
-  ]
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT205TVJVODVkM1pIVWpsbldUZ3pjV3MwWTNkNWNsRRAB",
+    "time": {
+      "published": 1769941306048009,
+      "last_edited": 1769942766074144
+    },
+    "author": {
+      "name": "ZAINAB",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocKGuTSm1ZCeOFBWG7xOKQEvacIKqhfUM_kxGAmBxPOD1wqHpg=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/108013047094895781113?hl=en",
+      "id": "108013047094895781113"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Our new designer console and mirror set just arrived, and it has completely transformed our hallway. Gulzar Sons is a legitimate High Quality Chinioti Furniture brand. This console is the Best Quality furniture in chiniot, featuring 100% Shesham wood and royal gold leafing. It's rare to find such Export Quality Chinioti Furniture at factory prices. Highly recommended for Best Chinioti Furniture!",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhAs52SUsPpCOG0V-DwKNuAf",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9ptrdPL1FV5pGgreC-EvRhahMTMKShn9PCSJ-DBprXhqZSOxkFubGTEjJDazcPVAd-YQ-WiHOHiqltSRMv0UkHaG489eH4abKP6I5QlxUjCcQhynALw1eXgoddtzcY0U-WX5rfDU8Oj7Nro",
+        "size": {
+          "width": 1000,
+          "height": 1000
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Zainab\nWe are so happy to you At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the top quality chinioti Furniture. Thank you for choosing us!",
+      "time": {
+        "published": 1769941418000000,
+        "last_edited": 1769941418000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2toalQzZG5kR1E1Y25aemNHUmplRkpCVDBadU5WRRAB",
+    "time": {
+      "published": 1769942612415024,
+      "last_edited": 1769942612415024
+    },
+    "author": {
+      "name": "Mohsin Ali",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIA9ted4bEkx7GvCcUjsCrgHqCpNGvo4PMXeit7mdEAWSo7BQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/115526883332291422642?hl=en",
+      "id": "115526883332291422642"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Our new designer console is the highlight of our lounge. It’s hard to find a High Quality Chinioti Furniture brand with such attention to detail. This is Top Quality Furniture in chiniot at its best. They are definitely one of the Furniture Brands in Chiniot you can trust for Export Quality Chinioti Furniture and unique Best Chinioti Furniture designs.",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhB5MPuadBLF5C3WnuqX1p3y",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9pviZqXZMybvxaUR2UyNkDIJSeciwHfC2k7RbT49AgynPtq_kyW_2E9WoB3zPq52JlU7gRIYa2mcmQIF5SqhI3OwEI208a43x9dSTuSuIItvgY-66iyLn0xeFdDsrtmpZi7TVo2TXu7BHWjA",
+        "size": {
+          "width": 1599,
+          "height": 899
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Mohsin Ali\nThank you so much! We strive to maintain our reputation for the top quality chinioti Furniture.",
+      "time": {
+        "published": 1769943235000000,
+        "last_edited": 1769943235000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21NdFVFcERURTk1VW5sTll6bEdiblJtTm1wNFJIYxAB",
+    "time": {
+      "published": 1768730269785350,
+      "last_edited": 1768730269785350
+    },
+    "author": {
+      "name": "Shakil Ahmad",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocKHTDGFfMROZc_CB7BB-F2lYuXO6tV9HHQUaLmNSx6BJImVMg=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/103844425106426332823?hl=en",
+      "id": "103844425106426332823"
+    },
+    "review": {
+      "rating": 5,
+      "text": "We ordered a custom sofa set and the woodwork is stunning. It’s hard to find such top quality furniture at these prices. Truly the best quality furniture in Chiniot with very professional service and timely delivery. Five stars!",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhBTZtUoYoCn1RufG_nivKqv",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9pvu4QEH3zXN9E3GntM4BHcAGunqa-VOtHVrvBC-pyUeWkrDFPZsPFzZbiaUsv0NHii4-P18UQzuV5X9aNScb7I0hvX7qJRasHlwiS9q87wYlHQaJMgyOgqdrbAd0bdtbnxlwDQazGvFHcjO",
+        "size": {
+          "width": 1728,
+          "height": 3840
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Shakil Ahmad\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!",
+      "time": {
+        "published": 1768730907000000,
+        "last_edited": 1768730907000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pSUWQwNHlNR1ZqUkZwNFZIZzRZVmxCVm5BdFFtYxAB",
+    "time": {
+      "published": 1769017396849979,
+      "last_edited": 1769017396849979
+    },
+    "author": {
+      "name": "Muhammad Umair",
+      "profile_url": "https://lh3.googleusercontent.com/a-/ALV-UjXzhdDalpbnjeimOrEAz7-Ypw4djC8visitY2p3nrBph8WF4LQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/103712498387968898625?hl=en",
+      "id": "103712498387968898625"
+    },
+    "review": {
+      "rating": 5,
+      "text": "The amazing quality furniture at Gulzar Sons never disappoints. My new bedroom chairs are elegantly carved and very sturdy. It is clear they use only the best seasoned wood for their products.",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhCumWBWUfyYjWHXuB8xYm-U",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9puI9A70tVKdSbM8cCVnYU3HPii-J-w-WjxXX1yVsxM71x0QPQaNghFVtyMXwWC59Yuh9wwUhRJDGsevxZwryKFFtbIzXY6Ct4IAMMJajui1BCa9xlSxw8c4Z-LCH79ciz9ChaRWRSnbta4",
+        "size": {
+          "width": 720,
+          "height": 720
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Muhammad Umair\nThank you so much! We strive to maintain our reputation for the best quality furniture in Chiniot.",
+      "time": {
+        "published": 1769082387000000,
+        "last_edited": 1769082387000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pCcGNrbHphM05zUm1Gb1lucFhOVk5KVTNaUmRtYxAB",
+    "time": {
+      "published": 1768925592404413,
+      "last_edited": 1768925592404413
+    },
+    "author": {
+      "name": "noor muhammadfn",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocKmiLRwtz8zNHFLZQko9NzzKkMByTZ04hIoyT0QXZsKlp06Jg=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105035579036698104486?hl=en",
+      "id": "105035579036698104486"
+    },
+    "review": {
+      "rating": 5,
+      "text": "The hand-carving on our new sofa set is beautiful. Gulzar Sons provides amazing quality furniture at very reasonable factory prices. Their attention to detail is 10/10!",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhB2uIiiX3w6NsjkgiFTySF8",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9psKI8BOqvME5QrNNZHxNz8Ht-7fRMJ8grZcwu4e9o3FNWvE_p2lHqAQvzzkSxOyhE2GJ-H8ppD-oX0zRgwUdQjQZVBmBaAl1YeU8hdA0iuQw_lNJcx39Z9gJeOlywLduN6v6Rf_z6yK1lw",
+        "size": {
+          "width": 655,
+          "height": 652
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Noor !\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!\n",
+      "time": {
+        "published": 1768979155000000,
+        "last_edited": 1768979155000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pndFlsaE9Ua2RmUnpoTGJVMXZWVlZxYTNWblIyYxAB",
+    "time": {
+      "published": 1754215266458655,
+      "last_edited": 1768730050894784
+    },
+    "author": {
+      "name": "Abdul Aziz",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocL67vsvCQzF6KYLOzjLGKGsDjBOXNW6QVVxjAaqjC5XAubQhQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105400033802070042868?hl=en",
+      "id": "105400033802070042868"
+    },
+    "review": {
+      "rating": 5,
+      "text": "I recently visited Gulzar Sons and I can honestly say they provide the best quality furniture in Chiniot. The attention to detail in their hand-carved pieces is unmatched. If you are looking for top quality furniture that lasts a lifetime, this is the place to go!",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhCogXraCracgIyZXx0gmuxZ",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9puM_YQKYMF4lvUYZKjdfO8lOhrrkSM8_CCqkdSgBcCfvPEFTyQMpCBsBw-waEcDYNeuWpQ_ny4ziiF7v5sFkMbuQGC5aCsyZFHHBCXBPDvySXLjQ8PP-I0wIrulMmtZg9MjdbAT-y0GDCuT",
+        "size": {
+          "width": 3024,
+          "height": 4032
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "\"We are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!\"",
+      "time": {
+        "published": 1767694417000000,
+        "last_edited": 1768126246000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tKNldVWklhSFJUYmpSa2RqWnpjVVF4VmsxUlRXYxAB",
+    "time": {
+      "published": 1768914557005002,
+      "last_edited": 1768914557005002
+    },
+    "author": {
+      "name": "Shk Zaibi",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIkgDoDA7u5yrfmDtXeCCyOz07pOEkJR_MMP1MDliRLWxjKXA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/108295859844636984840?hl=en",
+      "id": "108295859844636984840"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Highly impressed with the best quality furniture I received. The dining table set is heavy, solid wood, and has a mirror-like shine. Definitely the top quality furniture brand in the Chiniot market today.",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhB3j00O3vuETgfql4GtoGcQ",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9pvfYgvgJEAVWqWrOgA3g25o7d5es5JQ4LR6toLCquG2J8mwTjrBQwesJ5FGFeBrrpA79uy8LphZtbvrlYCiFL2Jo7BDExmaTgj6v39EznpwN-SDRQAeAp0QSVWFvSHpMrUgcHjoUbp7EfE",
+        "size": {
+          "width": 1284,
+          "height": 2778
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Thank you so much! We strive to maintain our reputation for the best quality furniture in Chiniot.",
+      "time": {
+        "published": 1768916961000000,
+        "last_edited": 1768916961000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xZd2Jtd3Rjamh1YjNKR2EwZGxSRkp0UmsxelJHYxAB",
+    "time": {
+      "published": 1769351673971651,
+      "last_edited": 1769351673971651
+    },
+    "author": {
+      "name": "Sheikh Basit",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIw3SQlCNjELN3P46WKhk0I2FLkWcuOWCOsid-DWM0XQOhW_g=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/102837931283088194530?hl=en",
+      "id": "102837931283088194530"
+    },
+    "review": {
+      "rating": 5,
+      "text": "I just received my hand-carved Dewan from Gulzar Sons, and it is truly the best quality furniture in Chiniot. The woodwork is solid, and the gold leafing is flawless. It adds such a royal touch to my living room!",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Sheikh Basit\nThank you so much! We strive to maintain our reputation for the best quality furniture in Chiniot\n",
+      "time": {
+        "published": 1769413630000000,
+        "last_edited": 1769413630000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21kT00yZHBlazVJWmpVdFdHZGhRVTFvTTA1WVNWRRAB",
+    "time": {
+      "published": 1769863047222161,
+      "last_edited": 1769863047222161
+    },
+    "author": {
+      "name": "Javed Shafiq",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIuHF_vzrNPVK6d-UBucwxIb8ZgnqK0bpt9URnHlRwtEGIQ_Q=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105731370814549954664?hl=en",
+      "id": "105731370814549954664"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Bought this bed high quality chinioti furniture here Gulzar sons furniture is a brand",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhCghUGx9q0MiT7x5JEdzKRa",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9psn9Dbm1UV2RgGybhPk2djgV8R8RqTJ6h9v34RueNfZrVGixtCjDYqC8hMhdSPwi9VaYacIk0Uxs_EHOFhxUDUA0mtok0OPXzD7LJ-RSc9NjgX-rr9SiH8tUI2Zj1bRfTeLrqzhyEeM5PF4",
+        "size": {
+          "width": 864,
+          "height": 1184
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Javed Shafiq\nWe are so happy to you At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality chinioti Furniture. Thank you for choosing us!",
+      "time": {
+        "published": 1769863211000000,
+        "last_edited": 1769863211000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT20xcmJHWlRPVEJCZUdWcldsaGtUSEZTV1dNNFVsRRAB",
+    "time": {
+      "published": 1768816526634147,
+      "last_edited": 1768816526634147
+    },
+    "author": {
+      "name": "Ch Abu baker Wahla",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocKKECoZWH0YuEhjQ6HuprzjRw6gxMwqXUe1nzSEcCTuEc-W7Q=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/115432761853349031496?hl=en",
+      "id": "115432761853349031496"
+    },
+    "review": {
+      "rating": 5,
+      "text": "I have purchased the best quality furniture in chiniot. Highly recommended.",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Ch Abu Bakar Wahla\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best and Premium quality furniture in Chiniot. Thank you for choosing us!",
+      "time": {
+        "published": 1768816644000000,
+        "last_edited": 1768816644000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2s5MVVIVk5SemxSTVRWbFozaEdURk5xYnpWWFZGRRAB",
+    "time": {
+      "published": 1767709741142174,
+      "last_edited": 1767709741142174
+    },
+    "author": {
+      "name": "M ahmad 786",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocI_-CK_pj093Uw5sZ4H10zpRWsQvgfWq000UEWzFsK6j6HRdQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/118297672555830495111?hl=en",
+      "id": "118297672555830495111"
+    },
+    "review": {
+      "rating": 5,
+      "text": "The collection here is stunning. I bought a bed frame recently, and was so impressed that the unique design was perfectly preserved from the showroom to my home.",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "\"We are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!\"",
+      "time": {
+        "published": 1768126147000000,
+        "last_edited": 1768126147000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xOcE4wSnVOWE5NT1ZwTVV6TlBiVWxxUlVKUGJHYxAB",
+    "time": {
+      "published": 1769952146580427,
+      "last_edited": 1769952146580427
+    },
+    "author": {
+      "name": "muneeb hayyat",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocLZ2gEwEYkHJIYOsg0uaTmwCWqcRw7toMwUymKx3jHyebmBxxfm=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/117871056567191514819?hl=en",
+      "id": "117871056567191514819"
+    },
+    "review": {
+      "rating": 5,
+      "text": "One of the best furniture in chiniot highly appreciated their service the name of brand gulzar sons furniture",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Muneeb Hayyat\nAs a leading High Quality Chinioti Furniture brand, we are proud of you.",
+      "time": {
+        "published": 1769957641000000,
+        "last_edited": 1769957641000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT201QldtTTVWVU5JWkZCYWRreGhjR0ZXWDA1WVFWRRAB",
+    "time": {
+      "published": 1768327641621851,
+      "last_edited": 1768327641621851
+    },
+    "author": {
+      "name": "Hassaan Sheikh",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocInCCH9hUIgrHDRgTHSlL-MWxJmDFY0AWTcDGsFziEifvVR7g=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/117683576478340661746?hl=en",
+      "id": "117683576478340661746"
+    },
+    "review": {
+      "rating": 5,
+      "text": "It was a fantastic experience...\nThe quality of all articles was awesome with Gulzar Sons Furniture",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Hassaan \nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us",
+      "time": {
+        "published": 1768374888000000,
+        "last_edited": 1768374888000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25kSVMydERNbDlwTkhoelFrSkpkelJwZDFNNFZrRRAB",
+    "time": {
+      "published": 1768328526901409,
+      "last_edited": 1768328526901409
+    },
+    "author": {
+      "name": "Mubashir Shk Mubashir",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocLf8vSJnY3m-yLeZdyGXJKsJtdoAkocaKi0McD8Bz2nP8EZJw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/110370018659633533728?hl=en",
+      "id": "110370018659633533728"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best home furniture store in chiniot Gulzar Sons Furniture",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Mubashir Shk !\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!",
+      "time": {
+        "published": 1768374869000000,
+        "last_edited": 1768374869000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25seVl6YzNZa3hwVW5Cc2FGQTBXV1l0YXpORVdFRRAB",
+    "time": {
+      "published": 1768902018913764,
+      "last_edited": 1768902018913764
+    },
+    "author": {
+      "name": "Umar Daraz",
+      "profile_url": "https://lh3.googleusercontent.com/a-/ALV-UjVpj5s42lHJZ-3z-NIhDA8TSc6uqhHXhs9hUuqS0Ad6OcOqTw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/117892026367683116430?hl=en",
+      "id": "117892026367683116430"
+    },
+    "review": {
+      "rating": 5,
+      "text": "So good 💯 high quality furniture in chiniot",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Umar Daraz\nThank you so much! We strive to maintain our reputation for the best quality furniture in Chiniot.",
+      "time": {
+        "published": 1768902389000000,
+        "last_edited": 1768902389000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21ZdGFraE5VbXRHZDFBM1dFOWhiMTg0ZFZjNVNHYxAB",
+    "time": {
+      "published": 1755941749294313,
+      "last_edited": 1755941749294313
+    },
+    "author": {
+      "name": "Ali Hassan",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIXqPbz4Xv2AgGZtPt4nUf1CvG3RqKdBTcYPchPzigS9vZv=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/114926255344018037230?hl=en",
+      "id": "114926255344018037230"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best place to buy furniture in town. Great quality and affordable rates.",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Thank you\n",
+      "time": {
+        "published": 1767694438000000,
+        "last_edited": 1767694438000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25wcFkwWlhWMjB6WlVaM1pTMXNTR2xNVTNCQ1JHYxAB",
+    "time": {
+      "published": 1768326301657956,
+      "last_edited": 1768326301657956
+    },
+    "author": {
+      "name": "Muhammad Ahmad",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocI-MS24eX-22y4dliTEJ23FVHfceetf1ZKbAFbTxW03yIH2rQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/107975036683485651194?hl=en",
+      "id": "107975036683485651194"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best quality furniture in chiniot\nALwaysTrusted",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Muhammad Ahmad !\nThank you so much for the 5-star rating! We strive to provide the best quality furniture in Chiniot, and we are glad you had a great experience with Gulzar Sons. We look forward to serving you again!",
+      "time": {
+        "published": 1768374936000000,
+        "last_edited": 1768374936000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pKUGJtaG5kR3BvY2tsU00xb3paM2xwU1hveE1GRRAB",
+    "time": {
+      "published": 1769850467524811,
+      "last_edited": 1769850467524811
+    },
+    "author": {
+      "name": "Malik Ashfaq Ashfaq",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIibg3RglGKEjW0upTVMEPvQopBWDtK-toMPxwUjUXp0bvHhw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105748654128365336821?hl=en",
+      "id": "105748654128365336821"
+    },
+    "review": {
+      "rating": 5,
+      "text": "One of the best furniture showroom in chiniot",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Malik Ashfaq\nWe are so happy to you At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality chinioti Furniture. Thank you for choosing us!",
+      "time": {
+        "published": 1769850641000000,
+        "last_edited": 1769850641000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2s0M1dWRk5ZMkp6VGpsVFRFbGhSakpGUVUxTFEzYxAB",
+    "time": {
+      "published": 1768730353519610,
+      "last_edited": 1768730353519610
+    },
+    "author": {
+      "name": "Hafiz Mudshar Sheikh",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocLGg_d5nzSCX6X-gUWvzV_LhjjzDNaCU-HBnLUiipPKzoKjzw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105925430568837195073?hl=en",
+      "id": "105925430568837195073"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best quality and furniture in chiniot amazing quality.",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Hafiz Sahab \nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!",
+      "time": {
+        "published": 1768730890000000,
+        "last_edited": 1768730890000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xac1JqSXRaVFpLTm5kMFFVbzBZM0EzUjJneFJGRRAB",
+    "time": {
+      "published": 1755941495610383,
+      "last_edited": 1755941495610383
+    },
+    "author": {
+      "name": "Ahmad Hassan",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocLMKg1NImUXWFY9XJHmVBJXwKGAsjnUaCxp35xccziCjPdyjA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/102465415329470050641?hl=en",
+      "id": "102465415329470050641"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Beautiful showroom with top quality products at reasonable prices will visit again.",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Thank you",
+      "time": {
+        "published": 1767694457000000,
+        "last_edited": 1767694457000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xGRVUwaDVjR3hCY1ZsTlh6VkZaV3RXTTNaT1RsRRAB",
+    "time": {
+      "published": 1768298821729244,
+      "last_edited": 1768298821729244
+    },
+    "author": {
+      "name": "Zeeshan Arshad",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIPEUuJJ7-v-2xylsirr9W5sDAdGfFsCBHw37ce8LVV97dpDA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/106985399865621169688?hl=en",
+      "id": "106985399865621169688"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best quality furniture in chuniot",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Zeeshan Arshad!\n\"Thank you so much for the 5-star rating! We strive to provide the best quality furniture in Chiniot, and we are glad you had a great experience with Gulzar Sons. We look forward to serving you again!\"",
+      "time": {
+        "published": 1768298967000000,
+        "last_edited": 1768298967000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2sxWllVTXpPVkp2WDE5Zk1rNVVNbDh5VFVSbFQxRRAB",
+    "time": {
+      "published": 1768383182624149,
+      "last_edited": 1768832380172676
+    },
+    "author": {
+      "name": "Shk Mubeen",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocJ4RoZ7Y9gORvBHnO6luwU8NIGkXIZyRBjQManTk4yFiGSOIw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105109076405886088522?hl=en",
+      "id": "105109076405886088522"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Good Quality at affordable rates loved it.",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Shk mubeen\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!",
+      "time": {
+        "published": 1768387844000000,
+        "last_edited": 1768387844000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21vMFMwTkdkRjlKY0dGclIyRk5jRXR2TjJwMmNIYxAB",
+    "time": {
+      "published": 1769601987307457,
+      "last_edited": 1769601987307457
+    },
+    "author": {
+      "name": "MUHAMMAD SHAHID",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocJZz8x2cXyM0tH21C-VaJr0tmY9q5IAQnTbG1kA2kaMnWh8Dg=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/115031619431095683287?hl=en",
+      "id": "115031619431095683287"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best quality wholesaler in chiniot",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Muhammad Shahid\nThank you so much! We strive to maintain our reputation for the best quality furniture in Chiniot",
+      "time": {
+        "published": 1769603659000000,
+        "last_edited": 1769603659000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21WWWRYZGFiVVJCTW1SUWRUVnZTVXRpY0RKclQxRRAB",
+    "time": {
+      "published": 1768383607391583,
+      "last_edited": 1768383630745485
+    },
+    "author": {
+      "name": "Waseem Qasim",
+      "profile_url": "https://lh3.googleusercontent.com/a-/ALV-UjWGD_LrWyb-YTQEdsnQezOHUbCwL1kfXu8TCTDEZUfapp7GA1eu=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/113779173265885369025?hl=en",
+      "id": "113779173265885369025"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Good experience",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Waseem qasim\nWe are so happy to hear your furniture arrived safely! At Gulzar Sons, we combine traditional craftsmanship with reliable service to ensure our customers receive the best quality furniture in Chiniot. Thank you for choosing us!",
+      "time": {
+        "published": 1768387744000000,
+        "last_edited": 1768387744000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2toTFgxaG5ZelZ2ZVRWSlpWUm5hbmxVTVUxM2FXYxAB",
+    "time": {
+      "published": 1755943992014548,
+      "last_edited": 1771497339397567
+    },
+    "author": {
+      "name": "Malik Abubakar",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocLsE6shxRgnjbZgjKcEdED0qkorbX2Zo9G-erN3L1bzoFHS0Q=s120-c-rp-mo-ba2-br100",
+      "url": "https://www.google.com/maps/contrib/113461705597005801389?hl=en",
+      "id": "113461705597005801389"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Wide range of furniture to choose from. Designs are elegant and classy.",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhBL9-_EMT0lYznHpb4oWK5u",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9pt4MZie3S2An28f_55MjGgE1jqhd6Jc_Oq4fiEW71PrnWQLPXEPyeTVDdirIor6yZe8LGzaW6stIgfjus6wG2a5mif1Fp0FBV2OQptZe8xtBYKyzxfDFnuVs6adI_EbAg-VSBG1JhDiQHns",
+        "size": {
+          "width": 1200,
+          "height": 1600
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Malik Abubakar !\n\"Thank you so much for the 5-star rating! We strive to provide the best quality furniture in Chiniot, and we are glad you had a great experience with Gulzar Sons. We look forward to serving you again!\"",
+      "time": {
+        "published": 1768126189000000,
+        "last_edited": 1768126189000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xFdE5tWk5Ubk51ZDFwa1IzVjFRbUU0YmpNeFVtYxAB",
+    "time": {
+      "published": 1771233565364147,
+      "last_edited": 1771233565364147
+    },
+    "author": {
+      "name": "M Bilal",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocKtcQMPMHAyI5pRnCbbnOmSl-pkSKRDaVrGKoB5sA5uG_BIF-Q=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/103810132306113768374?hl=en",
+      "id": "103810132306113768374"
+    },
+    "review": {
+      "rating": 5,
+      "text": "I just received my 7-seater Sofa and it is a masterpiece of Best Royal Furniture in Chiniot. It’s the perfect blend of Modern Furniture in Chiniot styles and traditional craftsmanship. You can tell Gulzar Sons is a Premium Quality Furniture in Chiniot manufacturer because of the finish and comfort. For anyone searching for Sofa wholesale in chiniot, this is the Top Quality Furniture in chiniot you need. They are easily the Best Chinioti Furniture makers in the market right now.",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhDVk_dmwWVQdRpQxCTVPnK6",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9pvkzJV9XrJJ_qeXE0l5h2TDXpeSW_xntwnivzYFsP-K9iEjkdWNZViaj1PJR9mIf5FpQahGg_bbWPN6aw-rqNV-S9ZltGYr4OwgWUQOl9AKsD3OVYE7EoaQWcSdH_jpwFPkT2YKL0RiMDjP",
+        "size": {
+          "width": 1080,
+          "height": 741
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "M Bilal\nThank you! We are proud to be the Top Quality Furniture brand in chiniot specializing in Export Quality Chinioti Furniture.",
+      "time": {
+        "published": 1771240890000000,
+        "last_edited": 1771240890000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pSWVJrRk9ReTAyZUdKVVpERnRMV1ZDUWxKYVpHYxAB",
+    "time": {
+      "published": 1770632351649915,
+      "last_edited": 1770632351649915
+    },
+    "author": {
+      "name": "Awais Akhtar",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocL2owjdBhnJQMpFsiccOlhiEON0OyX6Zu9w27Wvnv5_2ni3gA=s120-c-rp-mo-ba2-br100",
+      "url": "https://www.google.com/maps/contrib/100343123223528567971?hl=en",
+      "id": "100343123223528567971"
+    },
+    "review": {
+      "rating": 5,
+      "text": "I visited the showroom to buy a Dewan and was amazed by the High Quality Chinioti Furniture 2026 on display. This is the Best Chinioti Furniture I have seen in years. They offer the Best Royal Furniture in Chiniot 2026 with deep, artistic hand-carving. As a major player in Furniture Wholesale in Chiniot, they have the New Latest Furniture Designs 2026 ready to ship. If you want Top Quality Furniture in chiniot, don’t waste time elsewhere—this is the High Quality Chinioti Furniture brand to trust.",
+      "language": "en"
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Awais Akhtar!\nThank you! We are proud to be the Top Quality Furniture brand in chiniot specializing in Export Quality Chinioti Furniture.",
+      "time": {
+        "published": 1770633057000000,
+        "last_edited": 1770633057000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT20wMFJFSkxZWEJVZFZCTGJsOTBNVkZJTTI5WmRFRRAB",
+    "time": {
+      "published": 1770621036496524,
+      "last_edited": 1770621036496524
+    },
+    "author": {
+      "name": "Zunaira Zunaira",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocKXleiZEr_IQiaFtaXqhI1i0CKPaCts_QjxSZpHjpvahf6zgw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105724411815245485341?hl=en",
+      "id": "105724411815245485341"
+    },
+    "review": {
+      "rating": 5,
+      "text": "We were looking for a Sofa set that combined Modern Furniture in Chiniot aesthetics with a traditional touch. Gulzar Sons delivered the Best Royal Furniture in Chiniot we could have imagined. The polish and fabric are Export Quality Chinioti Furniture—world-class standards. As a High Quality Chinioti Furniture brand, they have proven why they are leaders among Furniture Brands in Chiniot. If you need Sofa wholesale in chiniot, this is the only shop you need to visit for High Quality Chinioti Furniture.",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhBi6B3Jbz4Eu1n8ZeknZG33",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9puW8_0oK71NtM6eGsdX1ew7IwoHGsSa9iENCPTRqyc2rkPmGNfrt3nRZ7HY-uIE2oXxTYZ9l8GksfP309lU7pCCm9n36s3K7mBwvVQWiHIAPa1Yv-m-3kxQ9KMjURIaNHbLIZv4atZkPTQ",
+        "size": {
+          "width": 960,
+          "height": 588
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Zunaira Zunaira !\nThank you! We strive to be the top High Quality Chinioti Furniture brand and are glad you liked our New Latest Furniture Designs 2026.",
+      "time": {
+        "published": 1770621283000000,
+        "last_edited": 1770621283000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25saVNubFFjMEZuU1Zad2EzaFdWRUo1V25oNlVIYxAB",
+    "time": {
+      "published": 1770305915264148,
+      "last_edited": 1770305995912457
+    },
+    "author": {
+      "name": "Muhmmad kamran",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocL0mzBQ6IOndD9xoSKGAD51YKm3OMWRFsBC6aRwn6WxOD66Iw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/103541567615456326281?hl=en",
+      "id": "103541567615456326281"
+    },
+    "review": {
+      "rating": 5,
+      "text": "I was searching for Furniture Wholesale in Chiniot and found Gulzar Sons to be the most professional. I purchased a Dewan and the craftsmanship is world-class. It is clearly the Best Chinioti Furniture available in the market right now. The use of Best Solid Shesham wood Furniture in chiniot ensures it will last for generations. They offer the Best Quality furniture in chiniot at factory prices. For anyone looking for a reliable High Quality Chinioti Furniture brand, this is your one-stop shop!",
+      "language": "en"
+    },
+    "images": [
+      {
+        "id": "CIABIhCAW_m4lQgZkYTOLkg-GQS_",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9ptqIOpID_GqfqQ3ZEiLiDDNAVNLNqnJqQOmY7o7l5A4QOfw30PIPEdRZwNy9_r9barcpNS16mKIYwwBRRUj4ve_zaJZgsZcVhdOmux6Qmt7H7SkH5PVX6TKy5PDA2AEoKJis0U_o84QjZQ",
+        "size": {
+          "width": 999,
+          "height": 771
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Muhammad Kamran\nThank you so much! We strive to maintain our reputation for the top quality chinioti Furniture.",
+      "time": {
+        "published": 1770447667000000,
+        "last_edited": 1770447667000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25aMlFqVkRkMGxUTUVOeUxWOW1iV0paUmt4eGIyYxAB",
+    "time": {
+      "published": 1770899976513758,
+      "last_edited": 1770899976513758
+    },
+    "author": {
+      "name": "Haider Ali",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocJYzh7iXCp6bY7QHaIoj5V0MUU9kSkKTC-SnO9MgpZMVImznw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/102022286015870492402?hl=en",
+      "id": "102022286015870492402"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best quality furniture in chuniot",
+      "language": null
+    },
+    "images": null,
+    "source": "Google",
+    "response": {
+      "text": "Thanks alot",
+      "time": {
+        "published": 1770902129000000,
+        "last_edited": 1770902129000000
+      }
+    }
+  },
+  {
+    "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25Cc2VHOW1USGRyVTBkUmFWcDJRakJGVW14dFlVRRAB",
+    "time": {
+      "published": 1770208937816659,
+      "last_edited": 1770208937816659
+    },
+    "author": {
+      "name": "Haseeb Amjad",
+      "profile_url": "https://lh3.googleusercontent.com/a/ACg8ocIniGsxDrOD5zBJf03QpOjuCSRGgOYCPujvniyogEmG9EQ4=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/104989484324059338255?hl=en",
+      "id": "104989484324059338255"
+    },
+    "review": {
+      "rating": 5,
+      "text": "Best place to buy furniture in town. Great quality and affordable rates.",
+      "language": null
+    },
+    "images": [
+      {
+        "id": "CIABIhBUT2GryvMxVWWxxFzoULT0",
+        "url": "https://lh3.googleusercontent.com/geougc-cs/ABOP9psfBfQvkbcCvZdCFMXrEcgC0cB1NA-Uq8xVoobfbBsmwGmEOs8ruXzkJukulCqGOeFBxWM9saH1FA-tCRo8q7H0t_UYDnGPRMthagAP2Wz62OtBmZ2ICzH0yqOstbTNJyXMhN-JUeiYtuY",
+        "size": {
+          "width": 1600,
+          "height": 1200
+        },
+        "location": {
+          "friendly": "Gulzar Sons Furniture",
+          "lat": 31.719396902839,
+          "long": 72.9849134156374
+        },
+        "caption": null
+      }
+    ],
+    "source": "Google",
+    "response": {
+      "text": "Haseeb Amjad\nThank you so much! We strive to maintain our reputation for the top quality chinioti Furniture.",
+      "time": {
+        "published": 1770209432000000,
+        "last_edited": 1770209432000000
+      }
+    }
+  }
+]
