@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 
 var ProuductSchema = mongoose.Schema({
-  ProductCode: String,
+  ProductCode: {
+    type: String,
+    unique: true
+  },
   ProductName: String,
   ProductImgUrl: Array,
   ProductDescript: String,

@@ -70,10 +70,30 @@ export const createProduct = async (req, res) => {
 export const getSingleProduct = async (req, res) => {
   try {
     var { ProductCode } = req.body;
+
+
     var product = await ProductsModal.findOne({ ProductCode });
+
+    if (!product) {
+      return res.send({
+        success: false,
+        message: "Product not found",
+      });
+    }
+
+
+    var relatedProducts = await ProductsModal.find({
+      Cetagroy: product.Cetagroy,
+      ProductCode: { $ne: ProductCode },
+    })
+      .limit(3)
+      .lean();
+
+
     res.send({
-      data: product,
       success: true,
+      data: product,
+      relatedProducts: relatedProducts,
     });
   } catch (error) {
     console.log(error);
