@@ -10,6 +10,7 @@ import sendGoogleReviews from './Services/SendGoogleReviews.js'
 import BlogRoutes from './Blogs/Blogs.Router.js'
 import cors from "cors";
 import requestLogger from "./Services/RequestLogger.js";
+import { rateLimit } from "./RateLimiterMW.js"
 import { SendSingBlog } from "./Blogs/Blogs.Controller.js";
 donenv.config();
 const app = express();
@@ -22,6 +23,7 @@ var PORT = process.env.PORT || 8800;
 ConnectDB();
 
 app.use(requestLogger)
+app.use(rateLimit)
 
 app.get("/", (req, res) => {
   res.send("Gulzar And Sons APIs Working Well and Good");
