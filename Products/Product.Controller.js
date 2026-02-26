@@ -189,7 +189,7 @@ export const rssRoutes = async (req, res) => {
       itemsXml += `
     <item>
       <title><![CDATA[${product.ProductName}]]></title>
-      <link>https://gulzarsonsfurniture.com/SinleProductView.html?PCode=${product.ProductCode}</link>
+      <link>https://gulzarsonsfurniture.com/SinleProductView?PCode=${product.ProductCode}</link>
       <description><![CDATA[${product.ProductDescript || ""}]]></description>
       ${mediaXml}
     </item>`;
