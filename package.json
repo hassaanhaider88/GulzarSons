@@ -2,8 +2,8 @@
   "name": "backendapis",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "type": "module",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -16,7 +16,7 @@
     "axios": "^1.13.4",
     "body-parser": "^2.2.0",
     "cloudinary": "^1.41.3",
-    "cors": "^2.8.5",
+    "cors": "^2.8.6",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "google-maps-review-scraper": "^2.0.0",

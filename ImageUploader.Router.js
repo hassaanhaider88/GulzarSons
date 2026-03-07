@@ -10,6 +10,7 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: "products", // cloudinary folder
+    format: "webp", // force convert to webp
     allowed_formats: ["jpg", "png", "jpeg", "webp"],
   },
 });
