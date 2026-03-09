@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Blogs || Gulzar Sons Furniture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/final.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  </head>
+
+  <body class="px-10">
+    <!-- simple navigation -->
+    <div
+      class="fixed z-30 h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+    >
+      <a href="/AdminPage.html">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="copy-svg-injected"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <!-- Image Picker -->
+    <div
+      id="ImagePickerMainDiv"
+      class="w-full overflow-hidden h-[40vh] mt-16 rounded-3xl cursor-pointer hover:boder-d border-dashed border-2 hover:border-[#F5A425] relative duration-400 transition-all bg-gray-300 flex justify-center items-center"
+    >
+      <input
+        multiple
+        accept="image/*"
+        type="file"
+        hidden
+        name=""
+        id="InputFile"
+      />
+      <img
+        src="https://i.pinimg.com/1200x/a3/09/44/a309441ab77afbd1c6ee774badef8e87.jpg"
+        id="AdminSelectImgPlaceHolder"
+        class="w-full h-full bg-cover"
+        alt=""
+      />
+      <button
+        id="UploadImgToDbBtn"
+        class="absolute bottom-5 hover:scale-95 hover:text-white duration-400 transition-all right-5 z-20 py-3 px-6 bg-[#F5A425] rounded-full"
+      >
+        Upload Img
+      </button>
+    </div>
+    <!-- Blogs Heading -->
+    <div class="w-full relative flex flex-col py-5">
+      <label for="Heading" class="font-semibold text-xl">Blog Heading</label>
+      <input
+        type="text"
+        id="BlogHeading"
+        oninput="handleHeadingChange(event)"
+        style="border-bottom: solid 2px black"
+        placeholder="Enter Your Blog Heading Here...."
+        class="pl-2 py-2 px-3 mt-1 my-5 text-4xl outline-none"
+      />
+      <pi id="MaximumTag" class="absolute text-sm bottom-4 right-0"
+        >Maximum 150 Left</pi
+      >
+    </div>
+    <!-- Blogger like text editor -->
+    <textarea id="TextAre"></textarea>
+    <button
+      id="PostBlogToDBBtn"
+      class="hover:scale-95 mt-10 mb-10 hover:text-white duration-400 transition-all right-5 z-20 py-3 px-6 bg-[#F5A425] rounded-full"
+    >
+      Post Blog
+    </button>
+  </body>
+  <script type="module">
+    var simplemde = new SimpleMDE({
+      element: document.getElementById("TextAre"),
+    });
+    import { BackEndHostedURI } from "./BEURI.js";
+
+    const BlogContent = simplemde.value();
+
+    const CheckForAdmin = localStorage.getItem("email");
+    if (!CheckForAdmin) {
+      window.location.href = "/";
+    }
+    const ImagePickerMainDiv = document.getElementById("ImagePickerMainDiv");
+    const InputFile = document.getElementById("InputFile");
+    const UploadImgToDbBtn = document.getElementById("UploadImgToDbBtn");
+    const PostBlogToDBBtn = document.getElementById("PostBlogToDBBtn");
+    const BlogHeading = document.getElementById("BlogHeading");
+    const MaximumTag = document.getElementById("MaximumTag");
+    // const editorText = document.getElementById("editor");
+    let selectFile;
+    let DbResImg;
+    const AdminSelectImgPlaceHolder = document.getElementById(
+      "AdminSelectImgPlaceHolder",
+    );
+    ImagePickerMainDiv.addEventListener("click", () => {
+      InputFile.click();
+    });
+    InputFile.addEventListener("change", (e) => {
+      selectFile = InputFile.files[0];
+      if (!selectFile) return;
+      const imageURL = URL.createObjectURL(selectFile);
+      AdminSelectImgPlaceHolder.src = imageURL;
+    });
+
+    UploadImgToDbBtn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      if (!selectFile) {
+        return alert("Please Uplaod Image First...");
+      }
+      const formData = new FormData();
+      formData.append("image", selectFile);
+      UploadImgToDbBtn.classList.add("cursor-not-allowed");
+      UploadImgToDbBtn.innerText = "Uplaoding...";
+
+      let res = await fetch(`${BackEndHostedURI}/api/upload-img`, {
+        method: "POST",
+        body: formData,
+      });
+
+      res = await res.json();
+      console.log(res);
+      if (!res.success) {
+        return alert("somthing wents Wrong....");
+      }
+      UploadImgToDbBtn.classList.add("hidden");
+      AdminSelectImgPlaceHolder.src = res.url;
+      DbResImg = res.url;
+    });
+
+    window.handleHeadingChange = function (e) {
+      const TypeText = e.target.value.split("");
+      MaximumTag.innerHTML = `Maximum ${150 - TypeText.length} Left`;
+    };
+
+    PostBlogToDBBtn.addEventListener("click", async () => {
+      if (
+        !selectFile ||
+        !BlogHeading.value ||
+        !DbResImg ||
+        !simplemde.value()
+      ) {
+        return alert("Please Uplaod image or Heading  First...");
+      }
+      const userInput = prompt("Please enter your Password:");
+      if (!userInput) {
+        return alert("please prodive..");
+      }
+      const res = await fetch(`${BackEndHostedURI}/api/admin-login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          passwordInput: userInput.toString(),
+          emailInput: localStorage.getItem("email"),
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        const Res = await fetch(`${BackEndHostedURI}/api/blogs/create`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ImgUrl: DbResImg,
+            Heading: BlogHeading.value,
+            BlogBody: simplemde.value(),
+          }),
+        });
+        const data = await Res.json();
+        console.log(data);
+        if (data.success) {
+          window.location.href = `${BackEndHostedURI}/blogs/${data.data._id}`;
+        } else {
+          alert(data.message);
+        }
+      } else {
+        alert("Invalid email or pass");
+      }
+    });
+  </script>
+</html>

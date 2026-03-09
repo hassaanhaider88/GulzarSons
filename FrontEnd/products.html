@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W5NPFT72');</script>
+<!-- End Google Tag Manager -->
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D4SO4OBC77U5FES2MJN0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description"
+    content="Discover timeless elegance and modern design with our curated collection of high-quality furniture. At Gulzar Sons and Mubashar, we blend functionality with aesthetics to create pieces that transform your house into a home. Whether you're looking for cozy sofas, sleek dining sets, or stylish bedroom furniture, our pieces are crafted with care, using premium materials built to last." />
+  <meta name="author" content="GulzarSons" />
+
+  <meta name="keywords" content="gulzarfurnitur,gulzarfurnitures.com,gulzar sons furniture " />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="English" />
+
+  <link rel="stylesheet" href="assets/css/baguetteBox.min.css" />
+  <link rel="stylesheet" href="gallery-grid.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="assets/final.png" />
+  <title>GULZAR Sons Furniture-AllProducts</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css" />
+  <link rel="stylesheet" href="assets/css/owl.css" />
+  <link rel="stylesheet" href="assets/css/lightbox.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<style>
+  #AllProductContainerDiv {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+     align-items: center;
+  }
+
+  .myImgInProductPage {
+    background: #000;
+    background: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+
+  }
+
+  .myImgInProductPage:hover {
+    scale: 0.90;
+
+  }
+
+  #CustomLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    gap: 30px;
+    width: 100vw;
+    background: #00000046;
+    z-index: 100;
+    color: white;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .TowBtnsInProduct {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .AddToCartBtn {
+    padding: 5px 5px;
+    border-radius: 10px;
+    background: #CF8F2A;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border: none;
+    transition: scale 0.3s ease-in-out;
+  }
+
+  .AddToCartBtn:hover{
+    scale: .95;
+  }
+
+.ProductPrice{
+  padding: 5px 8px;
+  border-radius: 10px;
+  background: yellowgreen;
+  color: white;
+}
+  .ChatOnWABtn {
+    padding: 5px 5px;
+    border-radius: 10px;
+    background: #049e04;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border: none;
+    transition: scale 0.3s ease-in-out;
+  }
+
+  .ChatOnWABtn:hover {
+    scale: 0.94;
+  }
+
+  .DescriptonText h1{
+    color: black !important;
+    font-size: 20px !important;
+  }
+
+  .DescriptonText p{
+    color: black !important;
+    font-size: 20px !important;
+  }
+
+  #UserCartSection {
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 45%;
+    background: #edebeb;
+    position: fixed;
+    right: 2px;
+    top: 150px;
+    border-radius: 15px;
+    padding: 5px;
+    z-index: 100;
+  }
+
+  @media (max-width: 700px) {
+    #UserCartSection {
+      width: 90%;
+      right: 5%;
+      left: 5%;
+    }
+  }
+
+  #UserCartDiv {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: none;
+  }
+
+
+  .product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    color: #000 !important;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin: 10px 0;
+  }
+
+  .product-card img {
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+    object-fit: cover;
+  }
+
+  .product-card img:hover {
+    transform: scale(1.1);
+  }
+
+  .delete-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+  }
+
+  .delete-btn:hover {
+    transform: scale(0.9);
+  }
+
+  .ProductPriceBox {
+  margin: 5px 0;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.OriginalPrice {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 16px;
+}
+
+.OfferPrice {
+  color: #e63946; /* Red highlight */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+  .delete-btn svg {
+    width: 25px;
+    height: 25px;
+    fill: red;
+  }
+
+  .menu-trigger {
+    display: none !important;
+    color: white;
+    background: #000;
+    position: absolute !important;
+    padding: 4px 6px;
+    border-radius: 5px;
+    right: 5px;
+    top: 35px;
+    cursor: pointer;
+  }
+
+  .CartOnMobile {
+    display: none !important;
+    color: white;
+    background: #000;
+    position: absolute !important;
+    padding: 2px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #CustomLoaderSVG{
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 700px) {
+    .menu-trigger {
+      display: block !important;
+      position: absolute !important;
+      right: 5px;
+      top: 50px;
+    }
+
+    .CartOnMobile {
+      display: block !important;
+
+      position: absolute !important;
+      right: 60px;
+      top: 50px;
+    }
+  }
+
+
+.product-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 400px;       /* fixed height */
+  object-fit: cover;   /* crop nicely */
+  transition: transform 0.4s ease;
+}
+
+.product-thumb:hover .product-img {
+  transform: scale(1.05);
+}
+
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.product-thumb:hover .product-overlay {
+  opacity: 1;
+}
+
+.overlay-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.overlay-price {
+  margin-top: 10px;
+}
+
+.overlay-price .original {
+  text-decoration: line-through;
+  color: #ccc;
+  margin-right: 8px;
+}
+
+.overlay-price .offer {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.overlay-price .discount {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.overlay-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.ChatOnWABtn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ChatOnWABtn {
+  background: #25D366;
+  color: white;
+}
+
+.ProductPrice{
+  width: 100%;
+  display: flex;
+  margin: 10px 0px;
+  gap: 4px;
+  background: none;
+  color: black;
+}
+
+.original{
+  text-decoration: line-through;
+  color: red;
+}
+.discount{
+  color:#CF8F2A;
+}
+
+</style>
+
+<body style="
+      background-image: url('assets/images/banner.png');
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow-x: hidden;
+    ">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns?id=GTM-W5NPFT72"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <span id="CustomLoader" class="hidden">
+    <svg id="CustomLoaderSVG" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="100px" width="100px" xmlns="http://www.w3.org/2000/svg" class="copy-svg-injected"><path d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"></path></svg>
+    <p>Loading please Wait....</p>
+  </span>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+             <a href="/" class="logo">
+              <img src="assets/final.png" height="100vh" alt="Gulzar_Sons" style="border-radius: 0" />
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li>
+                <a href="products?productCetagory=All" class="active">Products</a>
+              </li>
+
+              <li><a href="./aboutUs">About Us</a></li>
+              <li><a href="./services">Our Services</a></li>
+              <li><a href="./blogs">Blogs</a></li>
+              <li><a href="./UserOrder">My Orders</a></li>
+              <li onclick="HandleShowCartIconClick()">
+
+                <svg style="margin-top:5px;cursor:pointer" stroke="currentColor" fill="black" stroke-width="0"
+                  viewBox="0 0 576 512" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg"
+                  class="copy-svg-injected">
+                  <path
+                    d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48l45.5 0c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5L488 384c13.3 0 24-10.7 24-24s-10.7-24-24-24l-288.3 0c-11.5 0-21.4-8.2-23.6-19.5L170.7 288l288.5 0c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32L360 32l0 102.1 23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23L312 32 120.1 32C111 12.8 91.6 0 69.5 0L24 0zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z">
+                  </path>
+                </svg>
+              </li>
+              <!-- ***** Menu End ***** -->
+          </nav>
+          <span class="menu-trigger">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20px"
+              width="20px" xmlns="http://www.w3.org/2000/svg" class="copy-svg-injected">
+              <g id="Menu_Kebab">
+                <path
+                  d="M14.5,12c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+                </path>
+                <path
+                  d="M14.5,4.563c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+                </path>
+                <path
+                  d="M14.5,19.437c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,0 2.5,1.12 2.5,2.5Zm-1,0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,0 1.5,-0.672 1.5,-1.5Z">
+                </path>
+              </g>
+            </svg>
+          </span>
+          <li class="CartOnMobile" onclick="HandleShowCartIconClick()">
+
+            <svg style="margin-top:5px;cursor:pointer" stroke="currentColor" fill="white" stroke-width="0"
+              viewBox="0 0 576 512" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg"
+              class="copy-svg-injected">
+              <path
+                d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48l45.5 0c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5L488 384c13.3 0 24-10.7 24-24s-10.7-24-24-24l-288.3 0c-11.5 0-21.4-8.2-23.6-19.5L170.7 288l288.5 0c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32L360 32l0 102.1 23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23L312 32 120.1 32C111 12.8 91.6 0 69.5 0L24 0zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z">
+              </path>
+            </svg>
+          </li>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '725530866912190');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=725530866912190&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+
+  <!-- Whatsapp icon  -->
+
+  <div class="whats_app">
+    <a href="https://wa.link/6tefip">
+      <img src="assets/images/WhatsApp.svg.webp" alt="WhatsApp Icon" />
+    </a>
+  </div>
+
+  <section id="UserCartSection" class="hidden">
+
+    <div id="UserCartDiv"></div>
+    <div id="FinalCallOnWhatsAppBnt"
+      style="position: relative;display: flex;width:  100%;margin:5px ;justify-content: center;align-items: center; padding: 3px; ">
+      <button class="ChatOnWABtn">Check Out</button>
+    </div>
+
+  </section>
+
+  <section class="heading-page header-text" id="top" style="padding-bottom: 0px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6 class="" style="color: f5a425">Here are our Products</h6>
+          <h2 class="" style="color: 5a425">Product Section</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="meetings-page" id="meetings" style="padding-top: 20px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="filters">
+                <ul style="
+                      display: flex;
+                      width: full;
+                      flex-wrap: wrap;
+                      gap: 3px;
+                      justify-content: center;
+                      align-items: center;
+                    ">
+                  <li>
+                    <a style="text-decoration: none; color: black" href="/products?productCetagory=All">All</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black" href="/products?productCetagory=Luxury_Sets">Luxury Sets</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=BED_SET">Beds</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black" href="/products?productCetagory=SOLID_BED">Solid
+                      Beds</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=SOFA_SET">Sofas</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=DAINING_CHAIRS">Dinings</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=BED_ROOM_CHAIR">BedRoom Chairs</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=DEWAN">Dewans</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=CANSOL">CONSOLES</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=CHESTER">Chesters</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=JHOLA_CHAIR">SWINGS</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=SOOTING_ALMARI">Sootings</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=LOBBI_TABLE">Lobbi Table</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=HANDI_CRAFT">Handicraft</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: black"
+                      href="/products?productCetagory=OTHERS">Doors</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="category-intro" style="
+                  padding: 30px;
+                  text-align: center;
+                  background-color: #e2c391;
+                  justify-content: center;
+                  margin-bottom: 30px;
+                  color: black;
+                  border-radius: 10px;
+                " id="category-intro"></div>
+
+            <div class="" id="AllProductContainerDiv"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Get the modal
+    const modal = document.getElementById("imageModal");
+    // Get the image and insert it inside the modal
+    const images = document.querySelectorAll(".myImg");
+    const modalImg = document.getElementById("modalImage");
+
+    images.forEach((img) => {
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      };
+    });
+
+    // Get the <span> element that closes the modal
+    const closeBtn = document.querySelector(".close");
+
+    // When the user clicks on <span> (x), close the modal
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // Close the modal when clicking outside the image
+    modal.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+  <section>
+    <div class="footer" style="
+          background-color: #2c2c2c;
+          color: #ffffff;
+          padding: 40px 0;
+          font-family: Arial, sans-serif;
+        ">
+      <div class="container">
+        <div class="row">
+          <!-- Company Info -->
+          <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+            <h4 style="font-size: 1.5em; margin-bottom: 15px">Gulzar Sons Furnitures</h4>
+            <p style="font-size: 0.9em; line-height: 1.6">
+              Discover timeless elegance and modern design with our curated
+              collection of high-quality furniture.
+            </p>
+            <p style="font-size: 0.9em; margin-top: 10px">
+              Copyright © 2025
+              <a href="https://gulzarsonsfurniture.com" style="color: #25d366; text-decoration: none">GulzarSons Furnitures</a>
+              All Rights Reserved.
+            </p>
+          </div>
+          <!-- Navigation Links -->
+          <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+            <h4 style="font-size: 1.5em; margin-bottom: 15px">Quick Links</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.9em">
+              <li style="margin-bottom: 10px">
+                <a href="/" style="
+                      color: #ffffff;
+                      text-decoration: none;
+                      transition: color 0.3s ease;
+                    " onmouseover="this.style.color='#25D366';" onmouseout="this.style.color='#ffffff';">Home</a>
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="aboutUs" style="
+                      color: #ffffff;
+                      text-decoration: none;
+                      transition: color 0.3s ease;
+                    " onmouseover="this.style.color='#25D366';" onmouseout="this.style.color='#ffffff';">About Us</a>
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="products?ProductCetagory=All" style="
+                      color: #ffffff;
+                      text-decoration: none;
+                      transition: color 0.3s ease;
+                    " onmouseover="this.style.color='#25D366';" onmouseout="this.style.color='#ffffff';">Products</a>
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="services" style="
+                      color: #ffffff;
+                      text-decoration: none;
+                      transition: color 0.3s ease;
+                    " onmouseover="this.style.color='#25D366';" onmouseout="this.style.color='#ffffff';">Services</a>
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="Video-section" style="
+                      color: #ffffff;
+                      text-decoration: none;
+                      transition: color 0.3s ease;
+                    " onmouseover="this.style.color='#25D366';" onmouseout="this.style.color='#ffffff';">videos</a>
+              </li>
+
+              <li style="margin-bottom: 10px">
+                <a href="https://wa.link/6tefip" style="
+                      color: #ffffff;
+                      text-decoration: none;
+                      transition: color 0.3s ease;
+                    " onmouseover="this.style.color='#25D366';" onmouseout="this.style.color='#ffffff';">contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Contact Info and Social Media -->
+
+          <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+            <h4 style="font-size: 1.5em; margin-bottom: 15px">
+              Get in Touch
+            </h4>
+            <p style="font-size: 0.9em; margin-bottom: 10px">
+              <i class="fa fa-phone" style="margin-right: 8px"></i>
+              +92-310-818-4555
+            </p>
+            <p style="font-size: 0.9em; margin-bottom: 10px">
+              <i class="fa fa-envelope" style="margin-right: 8px"></i>
+              info@gulzarsons.com
+            </p>
+            <p style="font-size: 0.9em; margin-bottom: 20px">
+              <i class="fa fa-map-marker" style="margin-right: 8px"></i>
+              Chiniot, Pakistan
+            </p>
+            <h5 style="font-size: 1.2em; margin-bottom: 10px">Follow Us</h5>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 mb-4"></div>
+          <div class="col-lg-4 col-md-4 col-sm-12 mb-4 social-icons">
+            <ul>
+              <li>
+                <a href="https://facebook.com/gulzarsons.mubasharfurniture">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@GulzarSonsFurniture">
+                  <i class="fa fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.link/6tefip">
+                  <i class="fa fa-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/gulzarsons">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://tiktok.com/@gulzarsons">
+                  <i class="fa fa-tiktok"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://pinterest.com/gulzarsons">
+                  <i class="fa fa-pinterest"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  
+
+  <script>
+    //according to loftblog tut
+    $(".nav li:first").addClass("active");
+
+    var showSection = function showSection(section, isAnimate) {
+      var direction = section.replace(/products/, ""),
+        reqSection = $(".section").filter(
+          '[data-section="' + direction + '"]'
+        ),
+        reqSectionPos = reqSection.offset().top - 0;
+
+      if (isAnimate) {
+        $("body, html").animate(
+          {
+            scrollTop: reqSectionPos,
+          },
+          800
+        );
+      } else {
+        $("body, html").scrollTop(reqSectionPos);
+      }
+    };
+
+    var checkSection = function checkSection() {
+      $(".section").each(function () {
+        var $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
+          var currentId = $this.data("section"),
+            reqLink = $("a").filter(
+              "[href*=\\products" + currentId + "]"
+            );
+          reqLink
+            .closest("li")
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+        }
+      });
+    };
+
+    $(".main-menu, .responsive-menu, .scroll-to-section").on(
+      "click",
+      "a",
+      function (e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      }
+    );
+
+    $(window).scroll(function () {
+      checkSection();
+    });
+  </script>
+  <script type="module" src="./Product.js"></script>
+</body>
+
+</html>

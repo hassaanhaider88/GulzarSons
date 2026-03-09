@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Orders - GULZAR Sons and Mubashir</title>
+      <link rel="icon" type="image/x-icon" href="assets/GSF-3.png" />
+   
+      <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-white text-black">
+      <a href="./AdminPage.html">
+        <div
+        class="fixed h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-3 left-3 flex justify-center items-center"
+        >
+        <svg
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 448 512"
+        height="1em"
+        width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="copy-svg-injected"
+        >
+        <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          ></path>
+        </svg>
+      </div>
+    </a>
+    
+  <div class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-bold text-yellow-500 mb-6">Manage Orders</h1>
+
+    <!-- Orders Table -->
+    <div class="overflow-x-auto bg-gray-100 rounded-lg shadow p-4">
+      <table class="min-w-full text-sm">
+        <thead class="bg-yellow-400 text-white">
+          <tr>
+            <th class="p-2 text-left">Order ID</th>
+            <th class="p-2 text-left">Buyer</th>
+            <th class="p-2 text-left">Products Code</th>
+            <th class="p-2 text-left">Amount</th>
+            <th class="p-2 text-left">Payment Status</th>
+            <th class="p-2 text-left">Order Status</th>
+            <th class="p-2 text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTableBody" class="divide-y divide-gray-300">
+          <!-- Orders will be inject here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script defer type="module" src="./AdminOrder.js"></script>
+</html>

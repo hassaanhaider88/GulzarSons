@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description"
+    content="Discover timeless elegance and modern design with our curated collection of high-quality furniture. At Gulzar Sons and Mubashar, we blend functionality with aesthetics to create pieces that transform your house into a home. Whether you're looking for cozy sofas, sleek dining sets, or stylish bedroom furniture, our pieces are crafted with care, using premium materials built to last." />
+  <meta name="author" content="GulzarSons" />
+
+  <meta name="keywords" content="gulzarfurnitur,gulzarfurnitures.com,gulzar sons furniture " />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="English" />
+
+  <link rel="stylesheet" href="assets/css/baguetteBox.min.css" />
+  <link rel="stylesheet" href="gallery-grid.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="fonts.googleapis.com_css_family=Poppins_100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="assets/GSF-3.png" />
+  <title>Product Details || GULZAR Sons and Mubashir</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    /* Basic styling */
+    .product-description h1,
+    .product-description h2,
+    .product-description h3,
+    .product-description h4,
+    .product-description h5,
+    .product-description h6 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .product-description p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+
+    .product-description ul {
+      margin: 8px 0 8px 20px;
+    }
+
+    .product-description strong {
+      font-weight: bold;
+    }
+
+    .product-description em {
+      font-style: italic;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 relative text-gray-900">
+  <nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div onclick="BackHistoryBbn()" class="text-2xl flex justify-center items-center gap-2 font-bold text-yellow-500">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="30px" width="30px"
+          xmlns="http://www.w3.org/2000/svg" class="copy-svg-injected">
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z">
+          </path>
+        </svg>
+        <p>Back</p>
+      </div>
+
+      <!-- Right Side -->
+      <div class="flex items-center gap-6">
+        <!-- Cart Icon -->
+        <div onclick="toggleCartDrawer()" class="relative cursor-pointer">
+          <i class="fa-solid fa-cart-shopping text-2xl text-gray-700"></i>
+
+          <!-- Cart Count Badge -->
+          <span id="CartCountBadge"
+            class="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+            0
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-6xl mx-auto p-6">
+    <!-- Product Card -->
+    <div id="productCard" class="bg-white prose max-w-none shadow-lg rounded-xl p-6 border-t-4 border-yellow-500"></div>
+
+    <!-- Cart Drawer -->
+    <div id="CartDrawer"
+      class="fixed top-0 right-0 w-[400px] max-w-[90%] h-full bg-white shadow-2xl translate-x-full transition-transform duration-300 z-50 flex flex-col">
+      <!-- Header -->
+      <div class="flex justify-between items-center p-4 border-b">
+        <h2 class="text-lg font-semibold">Your Cart</h2>
+        <button onclick="toggleCartDrawer()" class="text-red-500 text-xl">
+          &times;
+        </button>
+      </div>
+
+      <!-- Cart Items -->
+      <div id="UserCartDiv" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
+
+      <!-- Footer -->
+      <div class="p-4 border-t">
+        <button onclick="goToCheckout()" class="w-full bg-yellow-500 text-white py-2 rounded-lg hover:opacity-90">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+
+    <div id="Image-MagnifireShow"
+      class="hidden fixed top-10 right-10 md:w-[40%] w-[90%] h-[60%] bg-white shadow-lg overflow-hidden rounded-l-xl">
+    </div>
+
+
+  </div>
+
+
+  <!-- Related Three Products showing here -->
+  <div class="px-5 py-10 md:px-20">
+    <h1 class="text-4xl font-bold mb-10">Related Products</h1>
+
+    <div id="relatedProductsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    </div>
+  </div>
+
+</body>
+<script type="module" src="./SinleProductView.js"></script>
+
+</html>

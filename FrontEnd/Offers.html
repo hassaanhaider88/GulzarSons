@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="assets/GSF-3.png" />
+    <title>GULZAR Sons and Mubashir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div
+      class="fixed h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+    >
+      <a href="/AdminPage">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="copy-svg-injected"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Container -->
+    <div class="max-w-3xl mx-auto mt-10 bg-white rounded-lg shadow-lg p-6">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Manage Offers</h2>
+
+      <!-- Add Offer Form -->
+      <form id="offerForm" class="space-y-4 mb-8">
+        <input
+          type="text"
+          id="title"
+          placeholder="Offer Title"
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        />
+        <textarea
+          id="description"
+          placeholder="Offer Description"
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        ></textarea>
+        <input
+          type="number"
+          id="durationDays"
+          placeholder="Duration (days)"
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="w-full bg-yellow-400 text-black font-semibold py-2 rounded-md hover:bg-yellow-500 transition"
+        >
+          ➕ Add Offer
+        </button>
+      </form>
+
+      <!-- Offers list -->
+      <div id="offersList" class="space-y-4"></div>
+    </div>
+
+    <script type="module">
+      import { BackEndHostedURI } from "./BEURI.js";
+      var IsUserAdmin = localStorage.getItem("email");
+      if (IsUserAdmin == null) {
+        window.location.href = "/";
+      }
+      console.log(IsUserAdmin);
+      const API_URL = `${BackEndHostedURI}/api/offers`; // update if different
+
+      // Fetch and display offers
+      async function loadOffers() {
+        const res = await fetch(API_URL);
+        const offers = await res.json();
+        const list = document.getElementById("offersList");
+        list.innerHTML = "";
+
+        (offers.data || offers).forEach((offer) => {
+          const div = document.createElement("div");
+          div.className =
+            "p-4 border border-gray-200 rounded-md bg-gray-50 shadow-sm flex justify-between items-start";
+
+          // Info block
+          const info = document.createElement("div");
+          info.className = "flex-1";
+          info.innerHTML = `
+          <h4 class="text-lg font-semibold text-gray-900">${
+            offer.title || "Untitled Offer"
+          }</h4>
+          <p class="text-gray-700">${offer.description}</p>
+          <p class="countdown text-yellow-600 font-bold mt-2" id="countdown-${
+            offer._id
+          }"></p>
+        `;
+
+          // Delete button
+          const delBtn = document.createElement("button");
+          delBtn.className =
+            "ml-4 bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition";
+          delBtn.textContent = "Delete";
+          delBtn.onclick = async () => {
+            const userInput = prompt("Please enter your Password:");
+            if (!userInput) {
+              alert("Password required");
+              return;
+            }
+            const loginRes = await fetch(
+              `${BackEndHostedURI}/api/admin-login`,
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  passwordInput: userInput,
+                  emailInput: localStorage.getItem("email"),
+                }),
+              },
+            );
+
+            const loginData = await loginRes.json();
+
+            if (!loginData.success) {
+              alert("Email or password is wrong");
+              return;
+            } else {
+              await fetch(`${API_URL}/${offer._id}`, { method: "DELETE" });
+              loadOffers();
+            }
+          };
+
+          div.appendChild(info);
+          div.appendChild(delBtn);
+          list.appendChild(div);
+        });
+      }
+
+      // Add new offer
+      document
+        .getElementById("offerForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const title = document.getElementById("title").value;
+          const description = document.getElementById("description").value;
+          const durationDays = parseInt(
+            document.getElementById("durationDays").value,
+          );
+
+          const userInput = prompt("Please enter your Password:");
+          if (!userInput) {
+            alert("Password required");
+            return;
+          }
+          const loginRes = await fetch(`${BackEndHostedURI}/api/admin-login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              passwordInput: userInput,
+              emailInput: localStorage.getItem("email"),
+            }),
+          });
+
+          const loginData = await loginRes.json();
+
+          if (!loginData.success) {
+            alert("Email or password is wrong");
+            return;
+          } else {
+            await fetch(API_URL, {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify({ title, description, durationDays }),
+            });
+
+            e.target.reset();
+            loadOffers();
+          }
+        });
+
+      // Initial load
+      loadOffers();
+
+    </script>
+  </body>
+</html>

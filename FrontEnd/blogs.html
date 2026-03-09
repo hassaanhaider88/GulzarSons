@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs || GULZAR Sons and Mubashir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/final.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .waveTop {
+      mask: radial-gradient(42px at bottom, #0000 calc(100% - 1px), #000)
+        50%/77.7px 100%;
+    }
+
+    .waveBottom {
+      mask: radial-gradient(42px at top, #0000 calc(100% - 1px), #000)
+        50%/77.7px 100%;
+    }
+  </style>
+
+  <body>
+    <nav
+      class="w-full z-20 text-white relative py-5 flex px-10 justify-between items-center"
+    >
+      <img
+        src="assets/final.png"
+        height="100vh"
+        alt="Gulzar_Sons"
+        class="h-20 w-20"
+      />
+      <ul class="w-full md:flex hidden justify-end gap-6">
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="index" class="active">Home</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="products?productCetagory=All">Products</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="aboutUs">About Us</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="services" class="active">Our Services</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="Video-section">Videos</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="blogs">Blogs</a>
+        </li>
+        <li>
+          <a href="./AdminPage">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="25px"
+              width="25px"
+              xmlns="http://www.w3.org/2000/svg"
+              class="copy-svg-injected"
+            >
+              <path
+                d="M11.0049 2L18.3032 4.28071C18.7206 4.41117 19.0049 4.79781 19.0049 5.23519V7H21.0049C21.5572 7 22.0049 7.44772 22.0049 8V16C22.0049 16.5523 21.5572 17 21.0049 17L17.7848 17.0011C17.3982 17.5108 16.9276 17.9618 16.3849 18.3318L11.0049 22L5.62486 18.3318C3.98563 17.2141 3.00488 15.3584 3.00488 13.3744V5.23519C3.00488 4.79781 3.28913 4.41117 3.70661 4.28071L11.0049 2ZM11.0049 4.094L5.00488 5.97V13.3744C5.00488 14.6193 5.58406 15.7884 6.56329 16.5428L6.75154 16.6793L11.0049 19.579L14.7869 17H10.0049C9.4526 17 9.00488 16.5523 9.00488 16V8C9.00488 7.44772 9.4526 7 10.0049 7H17.0049V5.97L11.0049 4.094ZM11.0049 12V15H20.0049V12H11.0049ZM11.0049 10H20.0049V9H11.0049V10Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- only mobile menu -->
+      <ul
+        id="MobileMenu"
+        class="w-full px-10 py-5 hidden top-40 bg-gray-300 left-0 flex-col flex absolute z-10 justify-start gap-6"
+      >
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="index" class="active">Home</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="products?productCetagory=All">Products</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="aboutUs">About Us</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="services" class="active">Our Services</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="Video-section">Videos</a>
+        </li>
+        <li class="font-semibold hover:text-[#CF8F2A]">
+          <a href="blogs">Blogs</a>
+        </li>
+        <li>
+          <a href="./AdminPage">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="25px"
+              width="25px"
+              xmlns="http://www.w3.org/2000/svg"
+              class="copy-svg-injected"
+            >
+              <path
+                d="M11.0049 2L18.3032 4.28071C18.7206 4.41117 19.0049 4.79781 19.0049 5.23519V7H21.0049C21.5572 7 22.0049 7.44772 22.0049 8V16C22.0049 16.5523 21.5572 17 21.0049 17L17.7848 17.0011C17.3982 17.5108 16.9276 17.9618 16.3849 18.3318L11.0049 22L5.62486 18.3318C3.98563 17.2141 3.00488 15.3584 3.00488 13.3744V5.23519C3.00488 4.79781 3.28913 4.41117 3.70661 4.28071L11.0049 2ZM11.0049 4.094L5.00488 5.97V13.3744C5.00488 14.6193 5.58406 15.7884 6.56329 16.5428L6.75154 16.6793L11.0049 19.579L14.7869 17H10.0049C9.4526 17 9.00488 16.5523 9.00488 16V8C9.00488 7.44772 9.4526 7 10.0049 7H17.0049V5.97L11.0049 4.094ZM11.0049 12V15H20.0049V12H11.0049ZM11.0049 10H20.0049V9H11.0049V10Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <span id="MobileMenuBtn" class="cursor-pointer relative md:hidden block">
+        <p class="absolute top-5 -left-1.5">Menu</p>
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          height="25px"
+          width="25px"
+          xmlns="http://www.w3.org/2000/svg"
+          class="copy-svg-injected"
+        >
+          <g id="Menu_Fries">
+            <path
+              d="M20.437,19.937c0.276,0 0.5,0.224 0.5,0.5c0,0.276 -0.224,0.5 -0.5,0.5l-16.874,0.002c-0.276,-0 -0.5,-0.224 -0.5,-0.5c-0,-0.276 0.224,-0.5 0.5,-0.5l16.874,-0.002Z"
+            ></path>
+            <path
+              d="M20.437,11.5c0.276,-0 0.5,0.224 0.5,0.5c0,0.276 -0.224,0.5 -0.5,0.5l-10,0.001c-0.276,-0 -0.5,-0.224 -0.5,-0.5c-0,-0.276 0.224,-0.5 0.5,-0.5l10,-0.001Z"
+            ></path>
+            <path
+              d="M20.437,3.062c0.276,-0 0.5,0.224 0.5,0.5c0,0.276 -0.224,0.5 -0.5,0.5l-16.874,0.001c-0.276,-0 -0.5,-0.224 -0.5,-0.5c-0,-0.276 0.224,-0.5 0.5,-0.5l16.874,-0.001Z"
+            ></path>
+          </g>
+        </svg>
+      </span>
+    </nav>
+    <div class="relative w-full -mt-40 waveTop h-screen">
+      <!-- Background Image -->
+      <img
+        src="https://i.pinimg.com/originals/e2/66/e2/e266e25679b58a891999be979212dc6c.jpg"
+        alt="Furniture Blog Background"
+        class="w-full h-full object-cover"
+      />
+
+      <!-- Overlay for readability -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <!-- Text Content -->
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center text-center px-4"
+      >
+        <h1
+          class="text-5xl sm:text-6xl md:text-7xl font-bold text-yellow-500 mb-4"
+        >
+          Blogs And Articles
+        </h1>
+        <p class="text-white text-sm sm:text-md md:text-lg max-w-2xl">
+          Explore practical guides, design tips, and expert advice to help you
+          choose the right furniture for your home and lifestyle. Our articles
+          make it easy to understand materials, styles, and smart buying
+          decisions.
+        </p>
+      </div>
+    </div>
+
+    <!-- all blogs will show here -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold mb-8 text-center">
+        Furniture Blogs in Pakistan
+      </h2>
+      <div
+        id="blogs-container"
+        class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      ></div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-gray-900 waveBottom pt-24 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Gulzar Sons Furnitures</h4>
+          <p class="text-sm leading-relaxed">
+            Discover timeless elegance and modern design with our curated
+            collection of high-quality furniture.
+          </p>
+          <p class="text-sm mt-4">
+            &copy; 2025
+            <a
+              href="https://gulzarsons.com"
+              class="text-green-500 hover:underline"
+              >GulzarSons Furnitures</a
+            >. All Rights Reserved.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="index" class="hover:text-green-500 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="products?ProductCetagory=All"
+                class="hover:text-green-500 transition-colors"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a href="aboutUs" class="hover:text-green-500 transition-colors"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="services" class="hover:text-green-500 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="Video-section"
+                class="hover:text-green-500 transition-colors"
+                >Videos</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.link/6tefip"
+                class="hover:text-green-500 transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info & Social -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Get in Touch</h4>
+          <p class="text-sm flex items-center mb-2">
+            <i class="fa fa-phone mr-2"></i> +92-310-818-4555
+          </p>
+          <p class="text-sm flex items-center mb-2">
+            <i class="fa fa-envelope mr-2"></i> info@gulzarsons.com
+          </p>
+          <p class="text-sm flex items-center mb-4">
+            <i class="fa fa-map-marker mr-2"></i> Chiniot, Pakistan
+          </p>
+          <h5 class="text-lg font-semibold mb-2">Follow Us</h5>
+          <ul class="flex space-x-4 text-xl">
+            <li>
+              <a
+                href="https://facebook.com/gulzarsons.mubasharfurniture"
+                class="hover:text-green-500"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@GulzarSonsFurniture"
+                class="hover:text-green-500"
+                ><i class="fa fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://wa.link/6tefip" class="hover:text-green-500"
+                ><i class="fa fa-whatsapp"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/gulzarsons"
+                class="hover:text-green-500"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://tiktok.com/@gulzarsons"
+                class="hover:text-green-500"
+                ><i class="fa fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://pinterest.com/gulzarsons"
+                class="hover:text-green-500"
+                ><i class="fa fa-pinterest"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script type="module">
+    import { BackEndHostedURI } from "./BEURI.js";
+    const CheckForAdmin = localStorage.getItem("email");
+
+    const MobileMenuBtn = document.getElementById("MobileMenuBtn");
+    const MobileMenu = document.getElementById("MobileMenu");
+
+    MobileMenuBtn.addEventListener("click", () => {
+      MobileMenu.classList.toggle("hidden");
+    });
+
+    // Dummy data array with working images
+
+    const container = document.getElementById("blogs-container");
+
+    const FetchBlogs = async () => {
+      try {
+        const res = await fetch(`${BackEndHostedURI}/api/blogs`);
+        const data = await res.json();
+        if (!data.success) {
+          alert(data.data.message);
+          window.history.back();
+        } else {
+          return data.data;
+        }
+      } catch (error) {
+        alert(error.message);
+        window.history.back();
+      }
+    };
+    const Blogs = await FetchBlogs();
+    await Blogs.forEach((blog) => {
+      const card = document.createElement("div");
+      card.className =
+        "bg-white rounded-lg cursor-pointer shadow hover:shadow-lg transition overflow-hidden";
+
+      card.innerHTML = `
+      <div class="py-5">
+        <img src="${blog.ImageUrl}" alt="${blog.MainHeading}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">${blog.MainHeading}</h3>
+        </div>
+        <div class="Buttons w-full py-2 px-4 flex justify-center items-center gap-5">
+          ${
+            CheckForAdmin
+              ? `<button onclick="UpdateBlogFunc('${blog._id}')" class="py-2 px-3 rounded-2xl bg-yellow-400 cursor-pointer text-white hover:scale-95 duration-300 transition-all">Update</button>
+          <button  onclick="DeleteBlogFunc('${blog._id}')"  class="py-2 px-3 rounded-2xl bg-red-400 cursor-pointer text-white hover:scale-95 duration-300 transition-all">Delete</button>`
+              : ""
+          }
+          <a href="${BackEndHostedURI}/blogs/${blog._id}"  class="cursor-pointer flex gap-2 justify-center items-center hover:scale-95 duration-300 transition-all">Read More <svg class="mt-1" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="copy-svg-injected"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg></a>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+
+    window.UpdateBlogFunc = function async(id) {
+      if (confirm("are you sure to Update?")) {
+        window.location.href = `/UpdateBlog.html?blogId=${id}`;
+      }
+    };
+
+    window.DeleteBlogFunc = async function (id) {
+      if (confirm("are you sure to Delete?")) {
+        const userInput = prompt("Please enter your Password:");
+        if (userInput) {
+          // here will check for real admin
+          const res = await fetch(`${BackEndHostedURI}/api/admin-login`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              passwordInput: userInput.toString(),
+              emailInput: localStorage.getItem("email"),
+            }),
+          });
+          const data = await res.json();
+          if (data.success) {
+            var deleteRes = await fetch(
+              `${BackEndHostedURI}/api/blogs/delete`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  Id: id,
+                }),
+              },
+            );
+            let deleteData = await deleteRes.json();
+            console.log(deleteData);
+            if (deleteData.success) {
+              window.location.reload();
+            } else {
+              alert("somthing wents wrong");
+            }
+          } else {
+            alert("Invalid email or password");
+          }
+        }
+      }
+    };
+  </script>
+</html>

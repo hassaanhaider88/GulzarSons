@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Blogs || Gulzar Sons Furniture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/final.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  </head>
+
+  <body class="px-10">
+    <!-- simple navigation -->
+    <div
+      class="fixed z-30 h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+    >
+      <a href="/AdminPage.html">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="copy-svg-injected"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Blogs Heading -->
+    <div class="w-full mt-20 relative flex flex-col py-5">
+      <label for="Heading" class="font-semibold text-xl">Blog Heading</label>
+      <input
+        type="text"
+        id="BlogHeading"
+        oninput="handleHeadingChange(event)"
+        style="border-bottom: solid 2px black"
+        placeholder="Enter Your Blog Heading Here...."
+        class="pl-2 py-2 px-3 mt-1 my-5 text-4xl outline-none"
+      />
+      <pi id="MaximumTag" class="absolute text-sm bottom-4 right-0"
+        >Maximum 150 Left</pi
+      >
+    </div>
+    <!-- Blogger like text editor -->
+    <textarea id="TextAre"></textarea>
+    <button
+      id="UpdateBlogBtn"
+      class="hover:scale-95 mt-10 mb-10 hover:text-white duration-400 transition-all right-5 z-20 py-3 px-6 bg-[#F5A425] rounded-full"
+    >
+      Updata Blog
+    </button>
+  </body>
+  <script type="module">
+    const CheckForAdmin = localStorage.getItem("email");
+    if (!CheckForAdmin) {
+      window.location.href = "/";
+    }
+    var simplemde = new SimpleMDE({
+      element: document.getElementById("TextAre"),
+    });
+    import { BackEndHostedURI } from "./BEURI.js";
+
+    const params = new URLSearchParams(window.location.search);
+    let BlogId = params.get("blogId");
+    console.log(BlogId);
+
+    const FetchBlogForUpdate = async () => {
+      try {
+        const res = await fetch(
+          `${BackEndHostedURI}/api/blogs/single/${BlogId}`,
+        );
+        const Data = await res.json();
+        if (!Data.success) {
+          alert(Data.message);
+        }
+        return Data.data;
+      } catch (error) {
+        alert("please refresh the page");
+      }
+    };
+
+    const BlogData = await FetchBlogForUpdate();
+
+     window.handleHeadingChange = function (e) {
+    const TypeText = e.target.value.split("");
+    MaximumTag.innerHTML = `Maximum ${150 - TypeText.length} Left`;
+  };
+
+    document.getElementById("BlogHeading").value = BlogData.MainHeading;
+    simplemde.value(BlogData.MainBody || "");
+    const UpdateBlogBtn = document.getElementById("UpdateBlogBtn");
+    UpdateBlogBtn.addEventListener("click", async () => {
+      const userInput = prompt("Please enter your Password:");
+      if (userInput) {
+        // here will check for real admin
+        const res = await fetch(`${BackEndHostedURI}/api/admin-login`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            passwordInput: userInput.toString(),
+            emailInput: localStorage.getItem("email"),
+          }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          const UpdateBlog = await fetch(
+            `${BackEndHostedURI}/api/blogs/update`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                Id: BlogId,
+                Heading: document.getElementById("BlogHeading").value,
+                BlogBody: simplemde.value(),
+              }),
+            },
+          );
+          const UpdateBlogData = await UpdateBlog.json();
+          if (!UpdateBlogData.success) {
+            alert("Somthing wents wrong on server please refersh or try again");
+          }
+          window.location.href = `${BackEndHostedURI}/blogs/${UpdateBlogData.data._id}`;
+        } else {
+          alert("Invalid email or password");
+        }
+      }
+    });
+  
+  </script>
+</html>

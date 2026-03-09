@@ -1,0 +1,831 @@
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.caption h6 {
+  font-size: 1.2rem;
+}
+
+.caption h2 {
+  font-size: 2.5rem;
+}
+
+.caption h1 {
+  font-size: 3rem;
+}
+
+.caption p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Mobile Responsive (max-width: 767px) */
+/* @media (max-width: 767px) {
+  .banner-image img {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .caption h6 {
+    font-size: 1.2rem;
+  }
+
+  .caption h2 {
+    font-size: 1.2rem;
+  }
+
+  .caption h1 {
+    font-size: 2rem;
+  }
+
+  .caption p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .main-button-red .scroll-to-section a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+} */
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+}
+
+/* WhatsApp Button */
+.whats_app {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.whats_app img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.whats_app img:hover {
+  transform: scale(1.1);
+}
+
+.whats_app a {
+  position: relative;
+  display: block;
+}
+
+.whats_app a::after {
+  content: "Chat with us on WhatsApp!";
+  position: absolute;
+  bottom: 70px;
+  right: -10px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.whats_app a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Meeting Item */
+.templatemo-item-col {
+  margin-bottom: 30px;
+}
+
+.meeting-item {
+  /* background: #fff; */
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* .meeting-item .thumb {
+  position: relative;
+  height: 250px; 
+  overflow: hidden;
+} */
+
+.meeting-item .thumb img {
+  width: 100%;
+  height: 250px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.meeting-item .thumb .price {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.meeting-item .thumb .price span {
+  font-size: 15px;
+  color: #1f272b;
+  font-weight: 600;
+  background-color: rgba(250, 250, 250, 0.9);
+  padding: 7px 12px;
+  border-radius: 10px;
+}
+
+.meeting-item .down-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+  padding: 30px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.meeting-item .down-content .date {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  text-align: left;
+  margin: 0;
+}
+
+.meeting-item .down-content .date h6 {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #966f33;
+  margin-left: 10px;
+}
+
+.meeting-item .down-content .date span {
+  display: block;
+  color: #1f272b;
+  font-size: 22px;
+  margin-top: 7px;
+}
+
+.meeting-item .down-content h4 {
+  font-size: 18px;
+  color: #1f272b;
+  font-weight: 600;
+  margin: 20px 0 5px; /* Reduced bottom margin from 15px to 5px */
+  width: 100%;
+}
+.meeting-item .down-content h4:hover {
+  color: #966f33;
+}
+
+.meeting-item .down-content p {
+  margin: 0 0 10px 0;
+  color: #1f272b;
+  font-size: 14px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Kept for button spacing */
+  line-height: 1.5;
+}
+
+.meeting-item .down-content p a {
+  display: inline-block;
+}
+
+.meeting-item .down-content .btn {
+  font-size: 13px;
+  color: #fff;
+  background-color: #da9d24bd;
+  padding: 12px 30px;
+  border-radius: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 15px;
+}
+
+.meeting-item .down-content .btn:hover {
+  opacity: 0.9;
+  background-color: #966f33;
+}
+
+/* Social Media Icons */
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons i,
+.social-icons img {
+  font-size: 1.5em;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  font-size: inherit;
+}
+
+.social-icons i.fa-facebook {
+  color: #3b5998;
+}
+.social-icons i.fa-youtube {
+  color: #ff0000;
+}
+.social-icons i.fa-whatsapp {
+  color: #25d366;
+}
+.social-icons i.fa-instagram {
+  color: #e1306c;
+}
+.social-icons i.fa-pinterest {
+  color: #bd081c;
+}
+
+.social-icons i.fa-facebook:hover {
+  background-color: #3b5998;
+  color: white;
+}
+.social-icons i.fa-youtube:hover {
+  background-color: #ff0000;
+  color: white;
+}
+.social-icons i.fa-whatsapp:hover {
+  background-color: #25d366;
+  color: white;
+}
+.social-icons i.fa-instagram:hover {
+  background-color: #e1306c;
+  color: white;
+}
+.social-icons i.fa-pinterest:hover {
+  background-color: #bd081c;
+  color: white;
+}
+.social-icons img.tiktok:hover {
+  background-color: #bd081c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .modal {
+    padding-top: 50px;
+  }
+  .modal-content,
+  #caption {
+    width: 90%;
+    max-width: 500px;
+  }
+  .close {
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+  }
+  .whats_app {
+    bottom: 15px;
+    right: 15px;
+  }
+  .whats_app img {
+    width: 50px;
+    height: 50px;
+  }
+  .whats_app a::after {
+    font-size: 10px;
+    bottom: 60px;
+    right: -5px;
+  }
+  .meeting-item .thumb img {
+    aspect-ratio: 4 / 3;
+  }
+  .meeting-item .down-content {
+    padding: 20px;
+  }
+  .meeting-item .down-content .date {
+    left: 15px;
+    top: 20px;
+  }
+  .meeting-item .down-content h4 {
+    font-size: 16px;
+  }
+  .meeting-item .down-content p {
+    font-size: 13px;
+    gap: 10px;
+  }
+  .meeting-item .down-content .btn {
+    padding: 10px 20px;
+  }
+  .social-icons {
+    gap: 8px;
+  }
+  .social-icons i,
+  .social-icons img {
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* RTL Support */
+html[dir="rtl"] .meeting-item .down-content .date {
+  left: auto;
+  right: 10px;
+}
+
+html[dir="rtl"] .social-icons {
+  flex-direction: row-reverse;
+}
+
+/* About Us Section */
+.about-us {
+  padding: 20px 0;
+}
+
+.about-content {
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.about-content h3 {
+  font-size: 24px;
+  color: #1f272b;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.about-content h3:hover {
+  color: #966f33;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #1f272b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-content .btn {
+  font-size: 13px;
+  color: #fff;
+  background-color: #a12c2f;
+  padding: 12px 30px;
+  border-radius: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: none;
+  display: inline-block;
+}
+
+.about-content .btn:hover {
+  opacity: 0.9;
+  background-color: #966f33;
+}
+
+.about-image img {
+  width: 100%;
+  margin-bottom: 70px;
+  height: 350px;
+  height: fixed;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.hidden {
+  display: "none" !important;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(
+    18deg,
+    rgba(139, 92, 246, 1) 0%,
+    rgba(0, 25, 43, 0.94) 0%,
+    rgba(153, 56, 202, 1) 16%,
+    rgba(224, 114, 74, 1) 81%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(72, 202, 228, 0.79) 100%
+  );
+}
+
+#XBtn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.countdown {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  z-index: 101;
+  position: relative;
+}
+.section-heading h2 {
+  line-height: 40px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+
+/* ========================
+   SCROLLBAR CUSTOMIZATION
+   ======================== */
+body {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f5ac3a;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f97416a1;
+  }
+}
+
+/* ========================
+   GOOGLE REVIEWS MARQUEE SECTION
+   ======================== */
+.MainReviewsContainer {
+
+  background-image: url(../images/bg-y.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 140px;
+  padding-bottom: 130px;
+  /* background: #fff; */
+  /* margin: 20px 0px; */
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Important: prevents body horizontal scroll */
+}
+
+.review-marquee-row {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.review-gradient-left,
+.review-gradient-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.review-gradient-left {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.review-gradient-right {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.review-marquee-inner {
+  display: flex;
+  min-width: 200%; /* for seamless loop */
+  padding: 40px 0;
+  animation: reviewMarqueeScroll 200s linear infinite;
+  cursor: pointer;
+}
+
+.review-marquee-inner:hover,
+.review-marquee-row:active,
+.review-marquee-row:focus-within {
+  animation-play-state: paused;
+}
+
+.review-marquee-reverse {
+  animation-direction: reverse;
+}
+
+@keyframes reviewMarqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+/* Respect reduced motion preference (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  .review-marquee-inner {
+    animation: none !important;
+  }
+}
+
+/* ========================
+   REVIEW CARD STYLES
+   ======================== */
+.review-card {
+  width: 288px;
+  margin: 0 16px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+  flex-shrink: 0;
+  background: #fff;
+  height: 380px;
+  overflow-y: auto; /* Changed to auto instead of scroll */
+}
+
+.review-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.review-card-header {
+  display: flex;
+  gap: 8px;
+  justify-content: start;
+  align-items: center;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: -8px;
+  color:black;
+}
+
+.handle {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: -2px;
+}
+
+.review-text {
+  font-size: 14px;
+  padding: 16px 0;
+  color: black;
+}
+
+.review-card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.footer-left a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  color: #0ea5e9;
+}
+
+.small-icon {
+  margin-top: 2px;
+}
+
+/* ========================
+   ADD REVIEW BUTTON
+   ======================== */
+.AddReviewBtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #f5ac3a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+.AddReviewBtn:hover {
+  scale: 0.95;
+  background: #e89c30;
+  color: black;
+}
+
+/* ========================
+   RESPONSIVE DESIGN (Mobile & Tablet)
+   ======================== */
+
+/* Tablets & larger phones */
+@media (max-width: 768px) {
+  .MainReviewsContainer {
+    margin: 15px 0;
+  }
+
+  .review-marquee-inner {
+    min-width: 300%; /* more space for smooth loop */
+    padding: 20px 0;
+    animation-duration: 35s; /* slower on mobile */
+  }
+
+  .review-card {
+    width: 260px;
+    margin: 0 12px;
+    height: 340px;
+    font-size: 0.92rem;
+  }
+
+  .review-gradient-left,
+  .review-gradient-right {
+    width: 60px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .MainReviewsContainer {
+    margin: 10px 0;
+  }
+
+  .review-marquee-inner {
+    min-width: 400%; /* helps with very small screens */
+    padding: 15px 0;
+    animation-duration: 45s; /* even slower – better readability */
+  }
+
+  .review-card {
+    width: calc(100vw - 40px); /* almost full width on small phones */
+    max-width: 320px;
+    margin: 0 10px;
+    height: 320px;
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  .review-gradient-left,
+  .review-gradient-right {
+    width: 40px;
+  }
+
+  .AddReviewBtn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra safety: prevent any unwanted horizontal scroll on body */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}

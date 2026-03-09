@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Order - GULZAR Sons and Mubashir</title>
+    <link rel="icon" type="image/x-icon" href="assets/GSF-3.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-white text-black min-h-screen flex justify-center items-center"
+  >
+    <a href="./products?productCategory=All">
+      <div
+        class="fixed h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+      >
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="copy-svg-injected"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          ></path>
+        </svg>
+      </div>
+    </a>
+    <div class="w-full max-w-3xl p-6 shadow-xl rounded-lg border">
+      <!-- Cart Preview -->
+      <div id="cartPreview" class="mb-6"></div>
+
+      <!-- Order Form -->
+      <form id="orderForm" class="space-y-4">
+        <h2 class="text-2xl font-bold text-yellow-400">Confirm Your Order</h2>
+
+        <!-- Buyer Name -->
+        <div>
+          <label class="block text-sm font-semibold">Full Name *</label>
+          <input
+            type="text"
+            id="buyerName"
+            placeholder="Enter Your Full Name"
+            required
+            class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block text-sm font-semibold">Phone Number *</label>
+          <input
+            type="tel"
+            id="buyerPhone"
+            placeholder="Enter Your Phone Number WhatsApp Recommended"
+            required
+            class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-semibold">Email (optional)</label>
+          <input
+            type="email"
+            id="buyerEmail"
+            placeholder="Enter Your Email"
+            class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label class="block text-sm font-semibold">Delivery Address *</label>
+          <textarea
+            id="buyerAddress"
+            placeholder="Enter Your Complete Address For Ease Of Delivery"
+            required
+            class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          ></textarea>
+        </div>
+
+        <!-- Payment Method -->
+        <div>
+          <label class="block text-sm font-semibold">Payment Method *</label>
+          <select
+            id="paymentMethod"
+            required
+            class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          >
+            <option value="COD">Cash on Delivery</option>
+            <option value="MBP">Mezaan Bank Pay</option>
+          </select>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          id="submitBtn"
+          class="w-full bg-yellow-400 text-black py-2 px-4 rounded font-bold hover:bg-yellow-500 transition"
+        >
+          Place Order
+        </button>
+      </form>
+    </div>
+
+    <script type="module">
+      const cartItems = JSON.parse(localStorage.getItem("UserCartData")) || [];
+
+      function parsePrice(value) {
+        if (value == null) return 0;
+        // remove commas, currency symbols and whitespace then parse
+        const cleaned = String(value).replace(/[,₹Rs.\s]/g, "");
+        const n = Number(cleaned);
+        return isNaN(n) ? 0 : n;
+      }
+
+      console.log(cartItems);
+      const cartPreview = document.getElementById("cartPreview");
+      import { BackEndHostedURI } from "./BEURI.js";
+      if (!cartItems || cartItems.length === 0) {
+        window.location.href = "/products";
+      } else {
+        let total = 0;
+        cartPreview.innerHTML = `
+          <h3 class="text-xl font-semibold mb-4">Your Cart</h3>
+          <div class="space-y-4">
+            ${cartItems
+              .map((item) => {
+                const unitPrice = parsePrice(
+                  item.ProductOfferPrice ?? item.ProductOriginalPrice,
+                );
+                const qty = Number(item.proudctQuantity) || 1;
+                const lineTotal = unitPrice * qty;
+                total += lineTotal;
+                return `
+                  <div class="flex gap-4 items-center border-b pb-4">
+                     <a href="./SinleProductView?PCode=${item.ProductCode}">
+                      <img src="${item.ProductImgUrl[0]}" class="w-20 h-20 object-cover rounded" />
+                      </a>
+                    <div>
+                      <h3 class="font-bold">${item.ProductName}</h3>
+                      <p class="mt-1 font-semibold">
+                        ${item.ProductOfferPrice ? "Rs. " + item.ProductOfferPrice : "On Request"}
+                      </p>
+                      <p class="mt-1 text-lg font-semibold">Quantity : ${item.proudctQuantity} </p>
+                    </div>
+                  </div>
+                `;
+              })
+              .join("")}
+          </div>
+          <p class="mt-4 text-lg font-bold">Total: Rs. ${total}</p>
+          
+        `;
+      }
+
+      // Handle order form submit
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const submitBtn = document.getElementById("submitBtn");
+          submitBtn.disabled = true;
+          submitBtn.innerText = "Placing Order...";
+
+          // Prepare order data
+          const orderData = {
+            Products: cartItems.map((p) => ({
+              ProductId: p._id,
+              ProductQuantity: p.proudctQuantity, // or p.quantity if that’s your key
+            })),
+            BuyerName: document.getElementById("buyerName").value,
+            BuyerPhone: document.getElementById("buyerPhone").value,
+            BuyerEmail: document.getElementById("buyerEmail").value,
+            BuyerAddress: document.getElementById("buyerAddress").value,
+            PaymentMethod: document.getElementById("paymentMethod").value,
+
+            TotalAmount: cartItems.reduce(
+              (acc, item) => acc + (Number(item.ProductOfferPrice) || 0),
+              0,
+            ),
+          };
+
+          console.log(orderData.Products);
+
+          try {
+            const res = await fetch(`${BackEndHostedURI}/api/orders/create`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(orderData),
+            });
+
+            const data = await res.json();
+            let existingOrders =
+              JSON.parse(localStorage.getItem("ProductId")) || [];
+            if (data.success) {
+              alert("✅ Order placed successfully!");
+              existingOrders.push(data.order);
+              localStorage.setItem("ProductId", JSON.stringify(existingOrders));
+              localStorage.removeItem("UserCartData");
+
+              window.location.href = "/UserOrder";
+            } else {
+              alert("❌ Failed: " + data.message);
+            }
+          } catch (err) {
+            alert("⚠️ Error: " + err.message);
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Place Order";
+          }
+        });
+    </script>
+  </body>
+</html>

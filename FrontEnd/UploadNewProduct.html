@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GULZAR-Admin Access</title>
+    <link rel="icon" type="image/x-icon" href="assets/GSF-3.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  </head>
+  <body
+    class="overflow-x-hidden min-h-screen flex items-center justify-center flex-col"
+  >
+    <a href="./AdminPage.html">
+      <div
+        class="fixed h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+      >
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="copy-svg-injected"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          ></path>
+        </svg>
+      </div>
+    </a>
+    <div class="w-full max-w-2xl mt-12 bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">
+        Upload New Product
+      </h2>
+
+      <form id="productForm" class="space-y-4">
+        <!-- Product Code -->
+        <div>
+          <label class="block text-gray-600 mb-1">Product Code</label>
+          <input
+            type="text"
+            id="productCode"
+            class="w-full border rounded-md px-3 py-2 focus:ring focus:ring-yellow-400 outline-none"
+          />
+        </div>
+
+        <!-- Product Name -->
+        <div>
+          <label class="block text-gray-600 mb-1">Product Name</label>
+          <input
+            type="text"
+            id="productName"
+            class="w-full border rounded-md px-3 py-2 focus:ring focus:ring-yellow-400 outline-none"
+          />
+        </div>
+
+        <!-- Product Description -->
+        <div>
+          <label class="block text-gray-600 mb-1">Product Description</label>
+          <!-- <textarea
+        
+            id="productDesc"
+            rows="3"
+            class="w-full border rounded-md px-3 py-2 focus:ring focus:ring-yellow-400 outline-none"
+          ></textarea> -->
+          <textarea id="TextAre"></textarea>
+        </div>
+
+        <!-- Category -->
+        <div>
+          <label class="block text-gray-600 mb-1">Category</label>
+
+          <select
+            name="productCategory"
+            id="productCategory"
+            style="width: 100%"
+          >
+            <option value="All">All</option>
+            <option value="Luxury_Sets">Luxury Sets</option>
+            <option value="BED_SET">Beds</option>
+            <option value="SOLID_BED">Solid Beds</option>
+            <option value="SOFA_SET">Sofas</option>
+            <option value="DAINING_CHAIRS">Dinings</option>
+            <option value="BED_ROOM_CHAIR">BedRoom Chairs</option>
+            <option value="DEWAN">Dewans</option>
+            <option value="CANSOL">Consoles</option>
+            <option value="CHESTER">Chesters</option>
+            <option value="JHOLA_CHAIR">Swings</option>
+            <option value="SOOTING_ALMARI">Sootings</option>
+            <option value="LOBBI_TABLE">Lobbi Table</option>
+            <option value="HANDI_CRAFT">Handicraft</option>
+            <option value="QOOOA_MAAL">Qoora Maal</option>
+            <option value="OTHERS">Doors</option>
+          </select>
+        </div>
+
+        <!-- Product Youtube URL -->
+        <div>
+          <label class="block text-gray-600 mb-1">Product Youtube URL</label>
+          <input
+            type="url"
+            id="productYTUrl"
+            class="w-full border rounded-md px-3 py-2 focus:ring focus:ring-yellow-400 outline-none"
+            placeholder="https://www.youtube.com/watch?v=example"
+          />
+        </div>
+
+        <!-- Original Price -->
+        <div>
+          <label class="block text-gray-600 mb-1">Product Original Price</label>
+          <input
+            type="number"
+            id="productOrigianlPrice"
+            class="w-full border rounded-md px-3 py-2 focus:ring focus:ring-yellow-400 outline-none"
+            placeholder="This Price Will be Cut"
+          />
+        </div>
+        <!-- Offer Price -->
+        <div>
+          <label class="block text-gray-600 mb-1">Product Offer Price</label>
+          <input
+            type="number"
+            id="ProductOfferPrice"
+            class="w-full border rounded-md px-3 py-2 focus:ring focus:ring-yellow-400 outline-none"
+            placeholder="This Price Will Be Implement"
+          />
+        </div>
+
+        <!-- Availability -->
+        <div class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            id="isAvailable"
+            class="h-5 w-5 text-yellow-500"
+          />
+          <label for="isAvailable" class="text-gray-600"
+            >Is Product Available?</label
+          >
+        </div>
+
+        <!-- Image Upload -->
+        <div>
+          <label class="block text-gray-600 mb-1">Upload Image</label>
+          <input
+            required
+            type="file"
+            id="productImages"
+            accept="image/*"
+            multiple
+            class="w-full"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg transition"
+        >
+          UpLoad Product
+        </button>
+      </form>
+
+      <!-- Preview Result -->
+      <div id="previewBox" class="mt-6 p-4 bg-gray-50 border rounded hidden">
+        <h3 class="text-lg font-semibold mb-2">Product Object Preview:</h3>
+        <pre
+          id="productOutput"
+          class="text-sm bg-black text-green-400 p-3 rounded overflow-x-auto"
+        ></pre>
+      </div>
+    </div>
+    <!-- Product Images Goes Here -->
+    <div
+      id="productImage"
+      class="w-full flex flex-wrap justify-center items-center gap-4 py-4"
+    >
+      <!-- Images will be inserted here -->
+    </div>
+
+    <div>
+      <button
+        id="FinalUploadProductBtn"
+        onclick="HanldeFinalUploadProduct()"
+        class="w-full hidden bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg transition mb-5"
+      >
+        Upload Finally
+      </button>
+    </div>
+    <div id="imageUploadStatus" class="space-y-2 mt-4"></div>
+    <div
+      id="productUploadStatus"
+      class="mt-4 font-semibold text-yellow-600 hidden"
+    >
+      Uploading Product...
+    </div>
+  </body>
+  <script type="module" src="./UploadNewProductsPage.js"></script>
+  <script>
+    var IsUserAdmin = localStorage.getItem("email");
+    if (IsUserAdmin == null) {
+      window.location.href = "/AdminPage.html";
+    }
+  </script>
+</html>

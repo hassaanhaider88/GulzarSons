@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>GULZAR-Admin Access</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/GSF-3.png" />
+  </head>
+  <body class="bg-gray-100 overflow-x-hidden">
+    <!--  Login Form -->
+    <div id="loginForm" class="min-h-screen flex justify-center items-center">
+      <div class="bg-white shadow-lg rounded-lg p-8 w-96">
+        <h2 class="text-2xl font-bold text-center mb-6">Admin Login</h2>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-500"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            class="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-500"
+            placeholder="Enter password"
+          />
+        </div>
+        <button
+          onclick="handleLogin()"
+          class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded-lg transition-all"
+        >
+          Login
+        </button>
+        <button
+          onclick="handleCencel()"
+          class="w-full mt-2 hover:bg-yellow-500 ring-2 text-black ring-yellow-500 hover:bg-yellow-600 font-semibold hover:text-white py-2 rounded-lg transition-all"
+        >
+          Cencel
+        </button>
+      </div>
+    </div>
+
+    <div id="adminPage" class="hidden">
+      <!-- Top bar -->
+
+      <div
+        class="sticky top-4 flex flex-wrap justify-center gap-5 sm:justify-between items-center"
+      >
+        <div class="flex relative top-5 left-5 gap-3">
+          <div
+            class="h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+          >
+            <a href="/" title="Back To Home">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+                class="copy-svg-injected"
+              >
+                <path
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+          >
+            <a href="./UploadNewProduct" title="Upload Product">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+                class="copy-svg-injected"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div
+            class="h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+          >
+            <a href="./AdminOrder" title="Manage Order">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="25px"
+                width="25px"
+                xmlns="http://www.w3.org/2000/svg"
+                class="copy-svg-injected"
+              >
+                <path
+                  d="M3.604 3.089A.75.75 0 0 1 4 3.75V8.5h.75a.75.75 0 0 1 0 1.5h-3a.75.75 0 1 1 0-1.5h.75V5.151l-.334.223a.75.75 0 0 1-.832-1.248l1.5-1a.75.75 0 0 1 .77-.037ZM8.75 5.5a.75.75 0 0 0 0 1.5h11.5a.75.75 0 0 0 0-1.5H8.75Zm0 6a.75.75 0 0 0 0 1.5h11.5a.75.75 0 0 0 0-1.5H8.75Zm0 6a.75.75 0 0 0 0 1.5h11.5a.75.75 0 0 0 0-1.5H8.75ZM5.5 15.75c0-.704-.271-1.286-.72-1.686a2.302 2.302 0 0 0-1.53-.564c-.535 0-1.094.178-1.53.565-.449.399-.72.982-.72 1.685a.75.75 0 0 0 1.5 0c0-.296.104-.464.217-.564A.805.805 0 0 1 3.25 15c.215 0 .406.072.533.185.113.101.217.268.217.565 0 .332-.069.48-.21.657-.092.113-.216.24-.403.419l-.147.14c-.152.144-.33.313-.52.504l-1.5 1.5a.75.75 0 0 0-.22.53v.25c0 .414.336.75.75.75H5A.75.75 0 0 0 5 19H3.31l.47-.47c.176-.176.333-.324.48-.465l.165-.156a5.98 5.98 0 0 0 .536-.566c.358-.447.539-.925.539-1.593Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div
+            class="h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+          >
+            <a href="./Offers" title="Manage Offers">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="25px"
+                width="25px"
+                xmlns="http://www.w3.org/2000/svg"
+                class="copy-svg-injected"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01 4 11V4h7v-.01l9 9-7 7.02z"
+                ></path>
+                <circle cx="6.5" cy="6.5" r="1.5"></circle>
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="h-10 w-10 bg-[#F5A425] text-white text-[25px] cursor-pointer hover:scale-95 duration-400 transition-all rounded-full top-5 left-5 flex justify-center items-center"
+          >
+            <a href="./AddBlogs" title="Add Blogs">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                height="25px"
+                width="25px"
+                xmlns="http://www.w3.org/2000/svg"
+                class="copy-svg-injected"
+              >
+                <path
+                  d="M446.6 222.7c-1.8-8-6.8-15.4-12.5-18.5-1.8-1-13-2.2-25-2.7-20.1-.9-22.3-1.3-28.7-5-10.1-5.9-12.8-12.3-12.9-29.5-.1-33-13.8-63.7-40.9-91.3-19.3-19.7-40.9-33-65.5-40.5-5.9-1.8-19.1-2.4-63.3-2.9-69.4-.8-84.8.6-108.4 10C45.9 59.5 14.7 96.1 3.3 142.9 1.2 151.7.7 165.8.2 246.8c-.6 101.5.1 116.4 6.4 136.5 15.6 49.6 59.9 86.3 104.4 94.3 14.8 2.7 197.3 3.3 216 .8 32.5-4.4 58-17.5 81.9-41.9 17.3-17.7 28.1-36.8 35.2-62.1 4.9-17.6 4.5-142.8 2.5-151.7zm-322.1-63.6c7.8-7.9 10-8.2 58.8-8.2 43.9 0 45.4.1 51.8 3.4 9.3 4.7 13.4 11.3 13.4 21.9 0 9.5-3.8 16.2-12.3 21.6-4.6 2.9-7.3 3.1-50.3 3.3-26.5.2-47.7-.4-50.8-1.2-16.6-4.7-22.8-28.5-10.6-40.8zm191.8 199.8l-14.9 2.4-77.5.9c-68.1.8-87.3-.4-90.9-2-7.1-3.1-13.8-11.7-14.9-19.4-1.1-7.3 2.6-17.3 8.2-22.4 7.1-6.4 10.2-6.6 97.3-6.7 89.6-.1 89.1-.1 97.6 7.8 12.1 11.3 9.5 31.2-4.9 39.4z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- filter search div -->
+        <div
+          class="relative h-10 w-96 bg-white text-white text-[25px] cursor-pointer ring-2 ring-[#F5A425] duration-400 transition-all rounded-full overflow-hidden top-5 right-5 flex justify-center items-center"
+        >
+          <input
+            type="text"
+            class="scale-90 outline-none bg-transparent text-black"
+            placeholder="Search By Product Code"
+            id="SearchValue"
+            value=""
+          />
+          <span
+            onclick="handleSearchBtn()"
+            class="absolute right-5 w-12 flex justify-center items-center h-12 bg-white text-black"
+            title="Search for Code"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+              class="copy-svg-injected"
+            >
+              <path
+                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Products container -->
+      <div class="w-full mt-16 min-h-[100vh]">
+        <div
+          class="w-full flex flex-col justify-center items-center gap-2 px-10"
+          id="AllProductsListContainer"
+        >
+          <!-- Products will load here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔹 Script -->
+    <script type="module" src="./AdminPage.js"></script>
+    <script type="module">
+      import { BackEndHostedURI } from "./BEURI.js";
+      async function CheckAdminEmailAndPassFromDB() {
+        var res = await fetch(`${BackEndHostedURI}/api/admin-login`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            emailInput: document.getElementById("email").value.trim(),
+            passwordInput: document.getElementById("password").value.trim(),
+          }),
+        });
+        res = await res.json();
+        console.log(res.success);
+        if (res.success) {
+          localStorage.setItem(
+            "email",
+            document.getElementById("email").value.trim(),
+          );
+          showAdminPage();
+        } else {
+          alert("Invalid email or password!");
+        }
+      }
+
+      window.onload = function () {
+        const email = localStorage.getItem("email");
+        const password = localStorage.getItem("password");
+        if (email != null) {
+          showAdminPage();
+        } else {
+          document.getElementById("loginForm").classList.remove("hidden");
+        }
+      };
+
+      window.handleLogin = function () {
+        const emailInput = document.getElementById("email").value.trim();
+        const passwordInput = document.getElementById("password").value.trim();
+
+        if (!emailInput || !passwordInput) {
+          alert("Please fill in both fields");
+          return;
+        }
+        CheckAdminEmailAndPassFromDB();
+      };
+
+      window.showAdminPage = function () {
+        document.getElementById("loginForm").classList.add("hidden");
+        document.getElementById("adminPage").classList.remove("hidden");
+      };
+
+      window.logout = function () {
+        localStorage.removeItem("email");
+        location.reload();
+      };
+
+      window.handleSearchBtn = function () {
+        const searchValue = document.getElementById("SearchValue").value.trim();
+        alert("Search triggered: " + searchValue);
+      };
+
+      window.handleCencel = function () {
+        window.location.href = "https://gulzarsonsfurniture.com/";
+      };
+    </script>
+  </body>
+</html>
